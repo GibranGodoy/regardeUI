@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Regarde Website
+### Equipo 8
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***
 
-## Available Scripts
+## 📋 ¿De qué trata el proyecto?
 
-In the project directory, you can run:
+_Diseño y Desarrollo de una interfaz de usuario usando ReactJS_
 
-### `npm start`
+* Esta Interfaz de Programación de Aplicaciones está  destinada a proveer información acerca de películas de anime japonés mediante una base de datos sintetizada eficientemenete.
+* El usar esta API, se podrá acceder a la base de datos con el fin de alimentar una aplicación en la que los usuarios puedan registrarse, encontrar películas existentes en el mercado y de estreno, así como el poder comentar las ya vistas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🛠️ Construido con:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [React](https://es.reactjs.org/) - biblioteca de JavaScript para construir interfaces de usuario.
+* [Webpack](https://webpack.js.org/) - Paquete de módulos de JavaScript de código abierto.
+* [Babel](https://babeljs.io/) - Herramienta para transformar código JS de última generación a un código JS que cualquier navegador pueda entender.
+* [Node.js](https://nodejs.dev/) - Hace referencia al entorno de ejecución de JavaScript utilizado.
 
-### `npm test`
+### ⚙️ Herramientas empleadas:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [gitignore.io](https://www.toptal.com/developers/gitignore) - Herramienta de desarrollo para crear un archivo `'/.gitignore'` eficiente.
+* [Figma](https://www.figma.com/) - Editor de gráficos vectoriales para la generación de Mockups.
+* [Zeplin](https://zeplin.io/) - Herramienta colaborativa para Diseñadores y Desarrolladores que permite generar componentes y código desde el diseño a medida en iOS, Android y Web.
 
-### `npm run build`
+## ✅ Especificaciones y Recursos visuales
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Mockups
+- [`Mockups`](mockups/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Inicialización
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Instalación de las dependencias necesarias
 
-### `npm run eject`
+```
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Development Environment
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Liga de la aplicación
+* [Regarde Website](#) 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 💻 Colaboradores
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Karla Flores Valona - [Kify7](https://github.com/Kify7) y [Charlie-Kify](https://github.com/Charlie-Kify)
+    * [Linkedin](https://www.linkedin.com/in/karla-valona)
+* Jorge Alberto Gomez Gomez - [jorgealbertogomezgomez77](https://github.com/jorgealbertogomezgomez77)
+    * [Linkedin](https://www.linkedin.com/in/jorgealbertogomez/)
+* Jessica Astrid Ortega Murillo - [Jessica-02](https://github.com/Jessica-02)
+    * [Linkedin](https://www.linkedin.com/in/jessica-ortega02)
+* Martha Rachell Gozcon Domínguez - [rachelldgz](https://github.com/rachelldgz)
+    * [Linkedin](https://www.linkedin.com/)
+* Brian Gibran Godoy Lomelí - [GibranGodoy](https://github.com/GibranGodoy)
+    * [Linkedin](https://www.linkedin.com/in/gibran-godoy/)
