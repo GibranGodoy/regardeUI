@@ -1,0 +1,41 @@
+@import '../../../css/index.scss';
+
+.footer {
+  background-color: $background-bg-800;
+
+  .info {
+    display: flex;
+    padding-top: 40px;
+    margin-left: 64px;
+
+    .team {
+      h6 {
+        margin-bottom: 24px;
+        color: $text-white-100;
+      }
+      p {
+        margin-bottom: 16px;
+      }
+    }
+
+    .repo {
+      margin-left: 480px;
+      margin-right: 64px;
+      h6 {
+        margin-bottom: 24px;
+        color: $text-white-100;
+      }
+    }
+  }
+  .bedu-logo {
+    text-align: right;
+    margin-bottom: 24px;
+    margin-right: 64px;
+  }
+
+  .copyright{
+      border-top: $text-white-400 1px solid;
+      text-align: center;
+      padding: 24px 0;
+  }
+}

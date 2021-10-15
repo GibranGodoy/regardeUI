@@ -1,0 +1,170 @@
+// Colours
+$background-bg-900: #1a2e3e;
+$background-bg-800: #2f4858;
+$background-bg-500: #4c7588;
+$background-bg-300: #738a90;
+$background-bg-100: #f2f4f9;
+
+$text-black-900: #18201f;
+$text-black-500: #293e42;
+$text-black-400: #507880;
+
+$text-white-800: #739298;
+$text-white-700: #8ca8ae;
+$text-white-600: #abc1c6;
+$text-white-500: #d0dfe2;
+$text-white-400: #dce7e9;
+$text-white-100: #f0f5f6;
+
+$accents-accent-100: #e7d98c;
+$accents-accent-200: #e0b746;
+$accents-accent-400: #dfa000;
+$accents-accent-700: #e08100;
+
+// Fonts
+h1 {
+  font-family: Montserrat;
+  font-size: 97px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.5px;
+}
+h2 {
+  font-family: Montserrat;
+  font-size: 61px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+h3 {
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+h4 {
+  font-family: Montserrat;
+  font-size: 34px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.25px;
+}
+h5 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+h6 {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.15px;
+}
+.body-1 {
+  font-family: Lato;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.65;
+  letter-spacing: 0.5px;
+}
+.subtitle-1 {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+button {
+  font-family: Lato;
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.25px;
+}
+.body-2 {
+  font-family: Lato;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: 0.25px;
+}
+.subtitle-2 {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.1px;
+}
+caption {
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: 0.4px;
+}
+.overline {
+  font-family: Lato;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 1.5px;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: $background-bg-900;
+  // background-color: red;
+}
+
+p{
+  color: $text-white-400;
+}
+
+// body {
+//   margin: 0;
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+//     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }
