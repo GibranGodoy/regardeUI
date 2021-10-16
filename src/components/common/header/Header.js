@@ -50,7 +50,7 @@ export default function PageHeader() {
         </Link>
 
         <IconButton
-          className="searchButtom"
+          className="searchButton"
           aria-label="search"
           color="inherit"
         >
