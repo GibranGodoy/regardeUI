@@ -10,20 +10,24 @@
     margin-right: auto;
     h5{
         color: $accents-accent-400;
+        font-family: 'Montserrat', sans-serif;
     }
     .more-info{
         .underline{
             text-decoration: underline;
+            font-family: 'Montserrat', sans-serif;
         }
         h6{
             color:$text-white-400;
             font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
             
         }
         h6 span{
             color:$text-white-400;
             font-weight: 100;
             margin-left: 50px;
+            font-family: 'Montserrat', sans-serif;
     
         }
     }
