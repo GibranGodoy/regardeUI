@@ -1,5 +1,7 @@
-import '../css/App.css';
-import Footer from './common/footer/Footer';
+import "../css/App.css";
+import Footer from "./common/footer/Footer";
+import CarouselContainer from "./CarouselContainer";
+// import CarouselItem from "./CarouselItem";
 
 function App() {
   return (
@@ -7,6 +9,10 @@ function App() {
       <header className="App-header">
         <h1>Regarde Website</h1>
       </header>
+      <CarouselContainer title= "Descubre más películas">
+        
+      </CarouselContainer>
+      
       <Footer />
     </div>
   );
