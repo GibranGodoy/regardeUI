@@ -1,0 +1,31 @@
+@import '../../../css/index.scss';
+
+.root {
+    flex-grow: 1;
+    background-color: $background-bg-800;
+    color: white;
+    border-bottom: white 1px solid;
+    .title {
+        margin-left: 40px;
+        margin-right: 40px;
+        color: $accents-accent-200;
+      }
+      .linkInicio {
+        margin-left: 40px;
+        margin-right: 40px;
+        font-family: "Lato";
+        font-size: 20px;
+
+      }
+      .searchButton{
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+      }
+      .peliculas .registro .login {
+        font-family: "Lato";
+      } 
+  }
+ 
+
+
