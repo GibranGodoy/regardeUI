@@ -8,6 +8,7 @@ function App() {
       <header className="App-header">
         <h1>Regarde Website</h1>
       </header>
+      <Card />
       <Footer />
     </div>
   );
