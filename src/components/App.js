@@ -1,16 +1,23 @@
-import '../css/App.css';
-import Footer from './common/footer/Footer';
-import Card from './common/cards/Card'
+
+import "../css/App.css";
+import Footer from "./common/footer/Footer";
+import PageHeader from "./common/header/Header";
+import AppBar from "@material-ui/core/AppBar";
+import { ThemeProvider } from "@material-ui/core/Styles";
+import theme from "../css/ThemeConfig";
+import Card from "./common/cards/Card";
 
 function App() {
   return (
-    <div className="app">
-      <header className="App-header">
-        <h1>Regarde Website</h1>
-      </header>
-      <Card />
-      <Footer />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="app">
+        <AppBar position="fixed">
+          <PageHeader />
+        </AppBar>
+        <Card />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
