@@ -1,5 +1,6 @@
 import '../css/App.css';
 import Footer from './common/footer/Footer';
+import Card from './common/cards/Card'
 
 function App() {
   return (
@@ -13,3 +14,4 @@ function App() {
 }
 
 export default App;
+
