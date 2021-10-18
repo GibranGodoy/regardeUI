@@ -1,0 +1,27 @@
+@import '../../../css/index.scss';
+
+.review{
+    display: flex;
+    gap: 32px;
+
+    .avatar{
+        width: 108px;
+        height: 108px;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        header{
+            display: flex;
+            gap: 24px;
+
+            h6{
+                color: $text-white-100;
+            }
+        }
+        .caption{
+            color: $text-white-800;
+        }
+    }
+}
