@@ -7,6 +7,7 @@ import { ThemeProvider } from "@material-ui/core/Styles";
 import theme from "../css/ThemeConfig";
 import Carousel from "./containers/Carousel";
 import ReviewList from "./common/reviews/ReviewList";
+import Favorites from "./common/favorites/Favorites";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <PageHeader />
         </AppBar>
         <Carousel />
+        <Favorites />
         <ReviewList />
         <Footer />
       </div>

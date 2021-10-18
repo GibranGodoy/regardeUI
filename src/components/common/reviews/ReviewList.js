@@ -9,8 +9,8 @@ export default function ReviewList() {
             <h5>¿Qué piensan los usuarios de las películas que han visto?</h5>
             <div className='list-review'>
                 {
-                    reviews.map((review) =>
-                        <Review {...review} />
+                    reviews.map((review, index) =>
+                        <Review key={index} {...review} />
                     )
                 }
                 {/* {
