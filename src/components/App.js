@@ -2,6 +2,7 @@
 import "../css/App.css";
 import Footer from "./common/footer/Footer";
 import PageHeader from "./common/header/Header";
+import Banner from "./common/banner/Banner";
 import AppBar from "@material-ui/core/AppBar";
 import { ThemeProvider } from "@material-ui/core/Styles";
 import theme from "../css/ThemeConfig";
@@ -17,6 +18,7 @@ function App() {
         <AppBar position="fixed">
           <PageHeader />
         </AppBar>
+        <Banner />
         <Carousel />
         <Favorites />
         <ReviewList />
