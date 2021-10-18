@@ -1,0 +1,35 @@
+@import '../../../css/index.scss';
+
+.favorite-list{
+    display: flex;
+    flex-direction: column;
+    margin: 0 64px;
+    gap: 56px;
+
+    h5{
+        color: $accents-accent-400;
+    }
+
+    .loggedOut{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 56px;
+        div{
+            h6{
+                color: $text-white-400;
+            }
+        }
+        .buttons{
+            // font-family: ;
+            display: flex;
+            gap: 80px;
+            .signup{
+                color: $text-white-400;
+                border: solid 2px $accents-accent-400 ;
+            }
+        }
+    }
+}

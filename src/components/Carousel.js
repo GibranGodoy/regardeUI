@@ -5,7 +5,7 @@ import Card from "./common/cards/Card";
 
 const Carousel = () => {
   return (
-    <section class="more-movies">
+    <section className="more-movies">
       <div className="information">
         <div className="info-title">
           <h5>Descubre más películas</h5>
@@ -24,8 +24,8 @@ const Carousel = () => {
         </div>
       </div>
       <div className="allCards">
-          {data.map((movie)=>{
-              return <Card {...movie}/>
+          {data.map((movie, index)=>{
+              return <Card key={index} {...movie}/>
           })}
           
       </div>
