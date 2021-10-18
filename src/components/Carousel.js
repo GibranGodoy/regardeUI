@@ -1,7 +1,12 @@
-import React from "react";
-import './common/cards/Card.scss';
+import { React } from "react";
+import "./common/cards/Card.scss";
 import { data } from "../data";
 import Card from "./common/cards/Card";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Carousel = () => {
   return (
@@ -23,11 +28,15 @@ const Carousel = () => {
           ></input>
         </div>
       </div>
+
       <div className="allCards">
-          {data.map((movie)=>{
-              return <Card {...movie}/>
-          })}
-          
+        <FontAwesomeIcon className="leftBtn" icon={faChevronLeft} />
+        {data.map((movie, index) => {
+          let position =
+            index > 0 ? "nextCard" : index === 0 ? "activeCard" : "prevCard";
+          return <Card className="card" {...movie} cardStyle={position} />;
+        })}
+        <FontAwesomeIcon className="rightBtn" icon={faChevronRight} />
       </div>
     </section>
   );

@@ -96,3 +96,22 @@
         }
     }
 }
+
+.leftBtn, .rightBtn {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $accents-accent-700;
+    align-self: center;
+}
+
+.cardn:hover .card-container{
+    transform: translateX(-25%);
+}
+
+.card-container:hover ~ .card-container{
+    transform: translateX(25%);
+}
+
+.card-container:hover {
+    transform: scale(1.2) !important;
+}
