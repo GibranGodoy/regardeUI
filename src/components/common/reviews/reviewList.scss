@@ -1,0 +1,19 @@
+@import '../../../css/index.scss';
+
+.reviews{
+    display: flex;
+    flex-direction: column;
+    margin: 0 64px;
+    gap: 56px;
+    margin-bottom: 88px;
+
+    h5{
+        color: $accents-accent-400;
+    }
+    .list-review{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin: 0 175px;
+    }
+}

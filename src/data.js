@@ -1,4 +1,4 @@
-export const data = [
+const data = [
     {
         title: "Kimi no Na wa",
         genres: [
@@ -142,3 +142,26 @@ export const data = [
       },
 
 ]
+
+const reviews= [
+  {
+    movie: "Kimi no Na wa",
+    user: {
+      username: "john-doe",
+      avatar: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+    },
+    rate:7.33,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in metus consequat, lobortis ligula sed, accumsan leo. Sed ut ex sit amet sapien laoreet tristique. Curabitur dapibus congue ultricies. Sed vestibulum orci finibus lectus malesuada faucibus eget ut dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum nec pretium felis, nec eleifend enim. Nulla quis sollicitudin metus, sit amet facilisis dolor. Sed sit amet porttitor nisi, vel faucibus mauris."
+  },
+  {
+    movie: "Kimi no Na wa",
+    user: {
+      username: "john-doe2",
+      avatar: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+    },
+    rate: 9.2,
+    text: "Integer leo urna, fringilla eu mattis nec, ultrices sed tortor. Aenean tempor tincidunt nibh, a commodo urna dapibus a. Proin quam justo, mollis sed quam maximus, sollicitudin lacinia nibh. Nam ac est ornare, vehicula felis in, condimentum tortor. Nulla facilisi. Duis vehicula elit ac massa gravida dapibus. Proin quis ante iaculis, elementum mi feugiat, gravida leo. Proin in cursus metus. Nulla facilisi. Sed accumsan nisl et ornare suscipit. Fusce suscipit est et elit porttitor aliquam. Donec eget ipsum sed nunc tincidunt gravida non et felis. Phasellus ut orci quis nisl euismod venenatis eu vel turpis. Phasellus eget fringilla erat, non imperdiet lectus. Morbi sit amet leo varius ante placerat congue."
+  }
+]
+
+export {data, reviews}
