@@ -1,0 +1,98 @@
+@import '../../../css/index.scss';
+
+
+.information{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+    h5{
+        color: $accents-accent-400;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .more-info{
+        .underline{
+            text-decoration: underline;
+            font-family: 'Montserrat', sans-serif;
+        }
+        h6{
+            color:$text-white-400;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            
+        }
+        h6 span{
+            color:$text-white-400;
+            font-weight: 100;
+            margin-left: 50px;
+            font-family: 'Montserrat', sans-serif;
+    
+        }
+    }
+    .iSearch{
+        background-color: $text-black-500;
+        padding:8px 16px;
+        color: $text-white-700;
+        border: none;
+        border-radius: 8px;
+    }
+}
+.allCards{
+    display: flex;
+    justify-content: center;
+
+    .card-container{
+        width: 230px;
+        height: 478px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 30px 15px 100px 15px;
+        padding: 0;
+        border-radius: 16px;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+        background-color: $background-bg-500;
+        color: $text-white-100;
+        
+        .card-img img{
+            width: 230px;
+            height: 354px;
+            flex-grow: 0;
+            border-radius: 16px 16px 0 0;
+            cursor: pointer;
+        }
+        .card-text{
+            height: 108px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 0 16px 16px;
+            font-family: "Montserrat";
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.15px;
+
+            .rate{
+                display: flex;
+                justify-content: space-between;
+                .star span{
+                    color: $accents-accent-400;
+                    height: 28px;
+                    margin: 2px 4px 2px 0;
+                }
+                .heart{
+                    width: 20px;
+                    height: 18.1px;
+                    color: $text-white-100; 
+                }
+                .heart:hover{
+                    color:#ff2828;
+                    cursor: pointer;
+                }
+                
+            }
+        }
+    }
+}
