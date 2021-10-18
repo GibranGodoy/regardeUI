@@ -7,7 +7,7 @@ import { favorites } from "../../../data";
 
 
 class Favorites extends React.Component {
-    status = { isLogin: true }
+    status = { isLogin: false }
     render() {
         let content
 
