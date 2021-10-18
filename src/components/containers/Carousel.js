@@ -1,11 +1,11 @@
 import { React } from "react";
-import "./common/cards/Card.scss";
-import { data } from "../data";
-import Card from "./common/cards/Card";
+import "../../css/Carousel&Card.scss"
+import { data } from "../../data";
+import Card from "../common/cards/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faChevronLeft,
-  faChevronRight,
+  faChevronCircleLeft,
+  faChevronCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Carousel = () => {
@@ -29,14 +29,14 @@ const Carousel = () => {
         </div>
       </div>
 
-      <div className="allCards">
-        <FontAwesomeIcon className="leftBtn" icon={faChevronLeft} />
+      <div className="allCards carousel-container">
+        <FontAwesomeIcon className="leftBtn" icon={faChevronCircleLeft} />
         {data.map((movie, index) => {
           let position =
             index > 0 ? "nextCard" : index === 0 ? "activeCard" : "prevCard";
           return <Card className="card" {...movie} cardStyle={position} />;
         })}
-        <FontAwesomeIcon className="rightBtn" icon={faChevronRight} />
+        <FontAwesomeIcon className="rightBtn" icon={faChevronCircleRight} />
       </div>
     </section>
   );

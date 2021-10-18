@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.scss";
+import "../../../css/Carousel&Card.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHeart } from "@fortawesome/free-solid-svg-icons";
 

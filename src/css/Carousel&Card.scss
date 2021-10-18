@@ -1,4 +1,4 @@
-@import '../../../css/index.scss';
+@import './index.scss';
 
 
 .information{
@@ -8,6 +8,7 @@
     width: 93%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
     h5{
         color: $accents-accent-400;
         font-family: 'Montserrat', sans-serif;
@@ -98,14 +99,32 @@
 }
 
 .leftBtn, .rightBtn {
-    font-size: 2rem;
+    font-size: 88px;
     font-weight: bold;
-    color: $accents-accent-700;
+    color: $text-white-100;
     align-self: center;
+    position: sticky;
+}
+.leftBtn{
+    left: 0;
+}
+.rightBtn {
+    right: 0;
 }
 
-.cardn:hover .card-container{
+.carousel__container {
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+    font-size: 0;
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+  }
+
+.carousel-container:hover .card-container{
     transform: translateX(-25%);
+    opacity: 0.3;
 }
 
 .card-container:hover ~ .card-container{
@@ -114,4 +133,5 @@
 
 .card-container:hover {
     transform: scale(1.2) !important;
+    opacity: 1 !important;
 }
