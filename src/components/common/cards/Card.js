@@ -1,11 +1,12 @@
 import React from "react";
-import "./Card.scss";
+import "../../../css/Carousel&Card.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Card = ({title, poster, rate}) => {
     return (
-        <div className="card-container">
+        <div 
+        className="card-container" >
         <div className="card-img">
           <img src={poster} alt="{alt}" />
         </div>
@@ -26,74 +27,6 @@ const Card = ({title, poster, rate}) => {
           </div>
         </div>
       </div>
-
-      /* <div className="card-container">
-                        <div className="card-img">
-                            <img src={imgproof} alt="{alt}"/>
-                        </div>
-                        <div className="card-text">
-                            <p>Sen to Chihiro no Kamikakushi</p>
-                            <div className="rate">
-                                <div className="star">
-                                    <p><span><FontAwesomeIcon icon ={faStar}/></span>8.7</p>
-                                </div>
-                                <div className='heart'>
-                                    <FontAwesomeIcon icon ={faHeart}/>
-                                </div>
-                            </div>   
-                        </div>
-                    </div>
-
-                    <div className="card-container">
-                        <div className="card-img">
-                            <img src={imgproof} alt="{alt}"/>
-                        </div>
-                        <div className="card-text">
-                            <p>Sen to Chihiro no Kamikakushi</p>
-                            <div className="rate">
-                                <div className="star">
-                                    <p><span><FontAwesomeIcon icon ={faStar}/></span>8.7</p>
-                                </div>
-                                <div className='heart'>
-                                    <FontAwesomeIcon icon ={faHeart}/>
-                                </div>
-                            </div>   
-                        </div>
-                    </div>
-
-                    <div className="card-container">
-                        <div className="card-img">
-                            <img src={imgproof} alt="{alt}"/>
-                        </div>
-                        <div className="card-text">
-                            <p>Sen to Chihiro no Kamikakushi</p>
-                            <div className="rate">
-                                <div className="star">
-                                    <p><span><FontAwesomeIcon icon ={faStar}/></span>8.7</p>
-                                </div>
-                                <div className='heart'>
-                                    <FontAwesomeIcon icon ={faHeart}/>
-                                </div>
-                            </div>   
-                        </div>
-                    </div>
-
-                    <div className="card-container">
-                        <div className="card-img">
-                            <img src={imgproof} alt="{alt}"/>
-                        </div>
-                        <div className="card-text">
-                            <p>Sen to Chihiro no Kamikakushi</p>
-                            <div className="rate">
-                                <div className="star">
-                                    <p><span><FontAwesomeIcon icon ={faStar}/></span>8.7</p>
-                                </div>
-                                <div className='heart'>
-                                    <FontAwesomeIcon icon ={faHeart}/>
-                                </div>
-                            </div>   
-                        </div>
-                    </div> */
     );
 }
 
