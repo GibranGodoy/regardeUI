@@ -3,6 +3,7 @@ import "../css/App.css";
 import React from 'react';
 import Footer from "./common/footer/Footer";
 import PageHeader from "./common/header/Header";
+import Banner from "./common/banner/Banner";
 import AppBar from "@material-ui/core/AppBar";
 import FirstCarousel from "./First Carousel";
 import { ThemeProvider } from "@material-ui/core/Styles";
@@ -19,6 +20,7 @@ function App() {
         <AppBar position="fixed">
           <PageHeader />
         </AppBar>
+        <Banner />
         <FirstCarousel />
         <Favorites />
         <ReviewList />
