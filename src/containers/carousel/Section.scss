@@ -1,0 +1,17 @@
+@import '../../css/index.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+.section-title{
+    display: flex;
+    height: 44px;
+    margin: 20px;
+}
+.title-container{
+    height: 44px;
+}
+.title{
+    color: $accents-accent-400;
+    font-family: Montserrat;
+    font-size: 24px;
+    flex-grow: 1;
+}

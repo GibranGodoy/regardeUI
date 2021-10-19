@@ -1,0 +1,36 @@
+@import '../css/index.scss';
+
+.information{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    h5{
+        color: $accents-accent-400;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        margin-right: 30px;
+    }
+    .more-info{
+        .underline{
+            text-decoration: underline;
+            font-family: 'Montserrat', sans-serif;
+        }
+        h6{
+            color:$text-white-400;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            margin-right: 60px;
+        }
+        h6 span{
+            color:$text-white-400;
+            font-weight: 100;
+            margin-left: 50px;
+            font-family: 'Montserrat', sans-serif;
+    
+        }
+    }
+}
