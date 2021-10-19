@@ -1,18 +1,20 @@
 @import '../css/index.scss';
 
-.information{
+.information {
     margin-top: 150px;
+    height: 44px;
     display: flex;
     justify-content: space-between;
     width: 93%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+
     h5{
         color: $accents-accent-400;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        margin-right: 30px;
+        margin-right: 60px;
     }
     .more-info{
         .underline{
@@ -27,10 +29,13 @@
         }
         h6 span{
             color:$text-white-400;
-            font-weight: 100;
-            margin-left: 50px;
+            font-weight: bold;
             font-family: 'Montserrat', sans-serif;
+            margin-right: 60px;
     
         }
     }
+}
+.carousel {
+    justify-self: center;
 }
