@@ -7,33 +7,12 @@ import Typography from "@material-ui/core/Typography";
 import SearchIcon from "@material-ui/icons/Search";
 import Link from "@material-ui/core/Link";
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     flexGrow: 1,
-//     backgroundColor: "#2f4858",
-//     color: "white",
-//     borderBottom: "1px solid",
-//     borderColor: "white",
-//   },
-//   title: {
-//     marginLeft: 40,
-//     flexGrow: 1,
-//     color: "#e0b746",
-//   },
-//   linkInicio: {
-//     fontFamily: "Lato",
-//     fontSize: 20,
-//   },
-// }));
-
 function handleClick(event) {
   event.preventDefault();
   console.info("Click on Inicio.");
 }
 
 export default function PageHeader() {
-  // const classes = useStyles();
-
   return (
     <div className="root">
       <Toolbar className="toolbar">
