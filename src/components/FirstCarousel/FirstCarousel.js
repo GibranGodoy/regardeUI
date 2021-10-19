@@ -1,14 +1,14 @@
 import React from "react";
-import Section from "../containers/carousel/Section";
-import CarouselTemplte from "../containers/carousel/CarouselTemplate";
-import { data } from "../data";
+import Section from "../common/section/Section";
+import CarouselTemplte from "../../containers/carousel/CarouselTemplate";
+import { data } from "../../data";
 import "./FirstCarousel.scss";
 
 const FirstCarousel = () => {
   return (
-    <div>
+    <section className="discover">
       <div className="information">
-        <Section title={"Descubre más pelis"} />
+        <Section title={"Descubre más películas"} />
         <div className="more-info">
           <h6>
             <span className="underline">Populares</span> <span>Recientes</span>
@@ -16,8 +16,8 @@ const FirstCarousel = () => {
         </div>
       </div>
 
-      <CarouselTemplte bd={data}></CarouselTemplte>
-    </div>
+      <CarouselTemplte bd={data} className="carousel"></CarouselTemplte>
+    </section>
   );
 };
 
