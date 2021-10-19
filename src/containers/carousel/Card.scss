@@ -1,0 +1,82 @@
+@import '../../css/index.scss';
+
+.card-container {
+    width: 230px;
+    height: 478px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 40px 15px 100px 15px;
+    padding: 0;
+    border-radius: 16px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+    background-color: $background-bg-500;
+    color: $text-white-100
+}
+
+.card-img img {
+    width: 230px;
+    height: 354px;
+    flex-grow: 0;
+    border-radius: 16px 16px 0 0;
+    cursor: pointer;
+}
+
+.card-text {
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 16px 16px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+    align-self: stretch;
+    white-space: pre-wrap;
+}
+
+.rated {
+    display: flex;
+    justify-content: space-between;
+
+    .star span {
+        color: $accents-accent-400;
+        height: 28px;
+        margin: 2px 4px 2px 0;
+    }
+
+    .heart {
+        width: 20px;
+        height: 18.1px;
+        color: $text-white-100;
+    }
+
+    .heart:hover {
+        color: #ff2828;
+        cursor: pointer;
+    }
+
+}
+
+.card-container{
+    transform: translateX(-25%);
+    opacity: 0.3;
+}
+
+.card-container:hover ~ .card-container{
+    transform: translateX(25%);
+}
+
+.card-container:hover {
+    transform: scale(1.2) !important;
+    opacity: 1 !important;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-img img:hover {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}

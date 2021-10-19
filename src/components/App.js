@@ -1,14 +1,16 @@
 
 import "../css/App.css";
+import React from 'react';
 import Footer from "./common/footer/Footer";
 import PageHeader from "./common/header/Header";
 import Banner from "./common/banner/Banner";
 import AppBar from "@material-ui/core/AppBar";
+import FirstCarousel from "./FirstCarousel/FirstCarousel";
 import { ThemeProvider } from "@material-ui/core/Styles";
 import theme from "../css/ThemeConfig";
-import Carousel from "./containers/Carousel";
 import ReviewList from "./common/reviews/ReviewList";
 import Favorites from "./common/favorites/Favorites";
+
 
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
           <PageHeader />
         </AppBar>
         <Banner />
-        <Carousel />
+        <FirstCarousel />
         <Favorites />
         <ReviewList />
         <Footer />

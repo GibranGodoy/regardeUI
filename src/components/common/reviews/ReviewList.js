@@ -6,7 +6,7 @@ import { reviews } from "../../../data";
 export default function ReviewList() {
     return (
         <section className='reviews'>
-            <h5>¿Qué piensan los usuarios de las películas que han visto?</h5>
+            <h5>¿Qué piensan los usuarios de las películas que han visto?</h5> 
             <div className='list-review'>
                 {
                     reviews.map((review, index) =>
