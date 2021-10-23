@@ -7,18 +7,18 @@ import { favorites } from "../../../data";
 
 
 class Favorites extends React.Component {
-    status = { isLogin: false }
+    status = { isLogin: true }
     render() {
         let content
 
         if (this.status.isLogin) {
-            content = <div className="allCards">
-                {
-                    favorites.map((favorite, index) => {
-                        return <Card key={index} {...favorite} />
-                    })
-                }
-            </div>
+            content = (
+              <div className="movies-deck">
+                {favorites.map((favorite, index) => {
+                  return <Card key={index} {...favorite} />;
+                })}
+              </div>
+            );
         }
         else {
             content = <div className='loggedOut'>

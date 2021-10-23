@@ -1,5 +1,5 @@
 import React from "react";
-import CarouselTemplte from "../../containers/carousel/CarouselTemplate";
+import CarouselTemplate from "../../containers/carousel/CarouselTemplate";
 import { data } from "../../data";
 import "./FirstCarousel.scss";
 
@@ -16,7 +16,7 @@ const FirstCarousel = () => {
         </div>
       </div> */}
 
-      <CarouselTemplte bd={data} className="carousel"></CarouselTemplte>
+      <CarouselTemplate bd={data} className="carousel"></CarouselTemplate>
 
     </>
   );
