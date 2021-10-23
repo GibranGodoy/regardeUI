@@ -1,0 +1,53 @@
+@import '../../../css/index.scss';
+
+.information {
+    margin-top: 150px;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    h5{
+        color: $accents-accent-400;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        margin-right: 60px;
+    }
+    .more-info{
+        .underline{
+            text-decoration: underline;
+            font-family: 'Montserrat', sans-serif;
+        }
+        h6{
+            color:$text-white-400;
+            font-weight: normal;
+            font-family: 'Montserrat', sans-serif;
+            margin-right: 60px;
+        }
+        h6 span{
+            color:$text-white-400;
+            font-weight: normal;
+            font-family: 'Montserrat', sans-serif;
+            margin-right: 60px;
+    
+        }
+    }
+}
+
+.movies-deck{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px 100px;
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+    font-size: 0;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+    padding-bottom: 10px;
+}

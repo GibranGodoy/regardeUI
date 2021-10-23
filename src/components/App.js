@@ -10,6 +10,7 @@ import { ThemeProvider } from "@material-ui/core/Styles";
 import theme from "../css/ThemeConfig";
 import ReviewList from "./common/reviews/ReviewList";
 import Favorites from "./common/favorites/Favorites";
+import MoviesList from "./common/moviesList/MoviesList";
 
 
 
@@ -22,6 +23,7 @@ function App() {
         </AppBar>
         <Banner />
         <FirstCarousel />
+        <MoviesList />
         <Favorites />
         <ReviewList />
         <Footer />
