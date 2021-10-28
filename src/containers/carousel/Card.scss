@@ -23,11 +23,11 @@
 }
 
 .card-text {
-    height: 108px;
+    height: 118px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 0 16px 16px;
+    padding: 0 16px;
     font-family: "Montserrat";
     font-weight: bold;
     font-size: 16px;
@@ -35,12 +35,17 @@
     letter-spacing: 0.15px;
     align-self: stretch;
     white-space: pre-wrap;
+
+    div{
+        margin-top: auto;
+    }
+
 }
 
 .rated {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    // margin-top: 20px;
 
     .star span {
         color: $accents-accent-400;
@@ -50,7 +55,7 @@
 
     .heart {
         width: 20px;
-        height: 18.1px;
+        // height: 18.1px;
         color: $text-white-100;
     }
 
@@ -61,23 +66,23 @@
 
 }
 
-.card-container{
-    transform: translateX(-25%);
-    opacity: 0.3;
-}
+// .card-container{
+//     transform: translateX(-25%);
+//     opacity: 0.3;
+// }
 
-.card-container:hover ~ .card-container{
-    transform: translateX(25%);
-}
+// .card-container:hover ~ .card-container{
+//     transform: translateX(25%);
+// }
 
-.card-container:hover {
-    transform: scale(1.2) !important;
-    opacity: 1 !important;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
+// .card-container:hover {
+//     transform: scale(1.2) !important;
+//     opacity: 1 !important;
+//     border-top-left-radius: 20px;
+//     border-top-right-radius: 20px;
+// }
 
-.card-img img:hover {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
+// .card-img img:hover {
+//     border-top-left-radius: 20px;
+//     border-top-right-radius: 20px;
+// }
