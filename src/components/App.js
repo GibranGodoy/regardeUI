@@ -22,7 +22,7 @@ function App() {
           <PageHeader />
         </AppBar>
         <Banner />
-        <FirstCarousel />
+        {/* <FirstCarousel /> */}
         <MoviesList />
         <Favorites />
         <ReviewList />

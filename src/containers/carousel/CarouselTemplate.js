@@ -8,7 +8,7 @@ import {
   faChevronCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-const CarouselTemplte = ({bd}) => {
+const CarouselTemplate = ({bd}) => {
 
   const sliderItems = bd.length > 5 ? 5 : bd.length;
   const items = [];
@@ -43,4 +43,4 @@ const CarouselTemplte = ({bd}) => {
 }
 
 
-export default CarouselTemplte;
+export default CarouselTemplate;

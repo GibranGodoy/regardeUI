@@ -28,22 +28,25 @@ export default function PageHeader() {
           Inicio
         </Link>
 
-        <IconButton
-          className="searchButton"
-          aria-label="search"
-          color="inherit"
-        >
-          <SearchIcon />
-        </IconButton>
-        <Button className="peliculas" color="inherit">
-          Peliculas
-        </Button>
-        <Button className="registro" color="inherit">
-          Registro
-        </Button>
-        <Button className="login" variant="contained" color="primary">
-          Iniciar Sesion
-        </Button>
+        
+        <div className='buttons'>
+          <IconButton
+            className="searchButton"
+            aria-label="search"
+            color="inherit"
+          >
+            <SearchIcon />
+          </IconButton>
+          <Button className="peliculas" color="inherit">
+            Peliculas
+          </Button>
+          <Button className="registro" color="inherit">
+            Registro
+          </Button>
+          <Button className="login" variant="contained" color="primary">
+            Iniciar Sesion
+          </Button>
+        </div>
       </Toolbar>
     </div>
   );
