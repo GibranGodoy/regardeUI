@@ -11,10 +11,36 @@ import theme from "../css/ThemeConfig";
 import ReviewList from "./common/reviews/ReviewList";
 import Favorites from "./common/favorites/Favorites";
 import MoviesList from "./common/moviesList/MoviesList";
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
 
 
 
 function App() {
+  // const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+
+  // React.useEffect(() => {
+  //   const URL = "http://localhost:4001/v1/";
+  // }, []);
+
+  const [user, setUser] = React.useState(null);
+
+  async function login(email, password) {
+    const response = await fetch(`http://localhost:4001/v1/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email,
+        password
+      })
+    });
+    const data = await response.json();
+    if (data.success) {
+      setUser(data.user);
+    }
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <div className="app">

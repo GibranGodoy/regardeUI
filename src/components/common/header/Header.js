@@ -22,14 +22,13 @@ export default function PageHeader() {
         <Link
           className="linkInicio"
           color="inherit"
-          href="#"
-          onClick={handleClick}
+          href="/"
+          // onClick={handleClick}
         >
           Inicio
         </Link>
 
-        
-        <div className='buttons'>
+        <div className="buttons">
           <IconButton
             className="searchButton"
             aria-label="search"
@@ -37,14 +36,22 @@ export default function PageHeader() {
           >
             <SearchIcon />
           </IconButton>
+
           <Button className="peliculas" color="inherit">
-            Peliculas
+            <Link underline="none" href="/peliculas" color="inherit">
+              Peliculas
+            </Link>
           </Button>
+
           <Button className="registro" color="inherit">
-            Registro
+            <Link underline="none" href="/signup" color="inherit">
+              Registro
+            </Link>
           </Button>
           <Button className="login" variant="contained" color="primary">
-            Iniciar Sesion
+            <Link underline="none" href="/login" color="inherit">
+              Iniciar Sesión
+            </Link>
           </Button>
         </div>
       </Toolbar>
