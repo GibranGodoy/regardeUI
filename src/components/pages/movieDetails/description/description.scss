@@ -1,0 +1,26 @@
+@import "../../../../css/index.scss";
+
+.descriptionAndGenres {
+  display: flex;
+  gap: 135px;
+  margin: 0 64px;
+  margin-top: 138px;
+  h5 {
+    color: $text-white-100;
+  }
+  .body-1{
+    color: $text-white-400;
+  }
+  .description {
+    max-width: 867px;
+    .body-1{
+      margin-top: 16px;
+    }
+  }
+  .genres{
+    ul{
+      margin-top: 16px;
+      margin-left: 28px;
+    }
+  }
+}

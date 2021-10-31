@@ -4,20 +4,20 @@ import Card from "../../../containers/carousel/Card.js";
 import "./movieslist.scss";
 
 
-function moviesList() {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [movies, setMovies] = React.useState([]);
+function moviesList(props) {
+    // // eslint-disable-next-line react-hooks/rules-of-hooks
+    // const [movies, setMovies] = React.useState([]);
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    React.useEffect(() => {
-        const URL = "https://regardapi.herokuapp.com/v1/movies";
-        const getMovies = async () => {
-            const response = await fetch(URL);
-            const data = await response.json();
-            setMovies(data);
-        }
-        getMovies();
-    }, [])
+    // // eslint-disable-next-line react-hooks/rules-of-hooks
+    // React.useEffect(() => {
+    //     const URL = "https://regardapi.herokuapp.com/v1/movies";
+    //     const getMovies = async () => {
+    //         const response = await fetch(URL);
+    //         const data = await response.json();
+    //         setMovies(data);
+    //     }
+    //     getMovies();
+    // }, [])
 
     return (
     <section className="moviesList">
@@ -31,9 +31,9 @@ function moviesList() {
         </div>
 
         <div className="movies-deck">
-            {movies.map((movie, index) => {
+            {props.movies.map((movie, index) => {
             let position =  index > 0 ? "nextCard" : index === 0 ? "activeCard" : "prevCard";
-            return <Card className="Card" {...movie} key={index} cardStyle={position} />;
+            return <Card className="Card" {...movie} key={index} id={movie._id} cardStyle={position} />;
             })}
         
         </div>

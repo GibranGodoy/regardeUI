@@ -9,8 +9,8 @@ const Home = (props) => {
   return (
     <>
       <Banner />
-      <MoviesList />
-      <Favorites user={ props.user }/>
+      <MoviesList movies={props.movies} />
+      <Favorites user={props.user} />
       <ReviewList />
       <Footer />
     </>
