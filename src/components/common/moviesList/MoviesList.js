@@ -1,8 +1,6 @@
 import React from "react";
 import Section from "../section/Section";
-import { data } from "../../../data";
 import Card from "../../../containers/carousel/Card.js";
-// import "../../FirstCarousel/FirstCarousel.scss";
 import "./movieslist.scss";
 
 
@@ -20,9 +18,6 @@ function moviesList() {
         }
         getMovies();
     }, [])
-
-    // const moviesasd =[...movies]
-    console.log(movies);
 
     return (
     <section className="moviesList">

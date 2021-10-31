@@ -7,14 +7,10 @@ import Typography from "@material-ui/core/Typography";
 import SearchIcon from "@material-ui/icons/Search";
 import Link from "@material-ui/core/Link";
 
-function handleClick(event) {
-  event.preventDefault();
-  console.info("Click on Inicio.");
-}
-
-export default function PageHeader() {
-  return (
-    <div className="root">
+export default function PageHeader(props) {
+  let content;
+  if (!props.user) {
+    content = (
       <Toolbar className="toolbar">
         <Typography className="title" variant="h5">
           Regarde
@@ -23,7 +19,6 @@ export default function PageHeader() {
           className="linkInicio"
           color="inherit"
           href="/"
-          // onClick={handleClick}
         >
           Inicio
         </Link>
@@ -55,6 +50,49 @@ export default function PageHeader() {
           </Button>
         </div>
       </Toolbar>
+    );
+  } else {
+    content = (
+      <Toolbar className="toolbar">
+        <Typography className="title" variant="h5">
+          Regarde
+        </Typography>
+        <Link
+          className="linkInicio"
+          color="inherit"
+          href="/"
+        >
+          Inicio
+        </Link>
+
+        <div className="buttons">
+          <IconButton
+            className="searchButton"
+            aria-label="search"
+            color="inherit"
+          >
+            <SearchIcon />
+          </IconButton>
+
+          <Button className="peliculas" color="inherit">
+            <Link underline="none" href="/peliculas" color="inherit">
+              Peliculas
+            </Link>
+          </Button>
+
+          <Button className="login" variant="contained" color="primary">
+            <Link underline="none" href="/logout" color="inherit">
+              Cerrar Sesión
+            </Link>
+          </Button>
+        </div>
+      </Toolbar>
+    );
+  }
+
+  return (
+    <div className="root">
+      {content}
     </div>
   );
 }
