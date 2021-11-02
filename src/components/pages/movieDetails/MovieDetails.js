@@ -7,6 +7,8 @@ import Description from "./description/Description";
 import Directors from "./directors/Directors";
 import Trailer from "./trailer/Trailer";
 import Cast from "./cast/Cast";
+import Comments from "./comments/Comments";
+import WriteComment from "./writeComment/WriteComment";
 
 const MovieDetails = (props) => {
   const [movie, setMovie] = React.useState([]);
@@ -32,7 +34,9 @@ const MovieDetails = (props) => {
       <Description movieGenres={movie.genres} description={movie.description} />
       <Directors directors={movie.directors} />
       <Trailer trailer={movie.trailer} />
-      <Cast cast={movie.cast}/>
+      <Cast cast={movie.cast} />
+      <Comments movieId={movie._id} />
+      <WriteComment movieId={movie._id} user={props.user}/>
       <Footer />
     </>
   );

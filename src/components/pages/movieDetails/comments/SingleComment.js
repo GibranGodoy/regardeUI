@@ -1,9 +1,9 @@
 import React from "react";
-import "./review.scss";
+import "./singleComment.scss";
 import Rating from "@mui/material/Rating";
 import { Avatar } from "@material-ui/core";
 
-export default function Review(props) {
+export default function SingleComment(props) {
   function stringToColor(string) {
     let hash = 0;
     let i;
@@ -37,14 +37,14 @@ export default function Review(props) {
     <div className="review">
       <Avatar
         {...stringAvatar(
-          `${props.review.user.name} ${props.review.user.lastname}`
+          `${props.review.userId.name} ${props.review.userId.lastname}`
         )}
         className="avatar"
       />
 
       <div>
         <header>
-          <h6>{props.review.movie.title}</h6>
+          <h6>{props.review.userId.username}</h6>
           <Rating
             name="half-rating-read"
             value={props.review.rate}
@@ -53,7 +53,7 @@ export default function Review(props) {
           />
         </header>
         <p className="caption">
-          {props.review.user.username} - {props.review.createdAt.split("T")[0]}
+          {props.review.createdAt.split("T")[0]}
         </p>
         <p className="body-1">{props.review.text}</p>
       </div>
