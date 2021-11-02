@@ -1,0 +1,17 @@
+@import "../../../../css/index.scss";
+
+.cast {
+  margin: 0 64px;
+  margin-top: 56px;
+  h5 {
+    color: $text-white-100;
+  }
+  .body-1 {
+    margin-top: 16px;
+    color: $text-white-400;
+    list-style-type: none;
+    li{
+      margin-top: 8px;
+    }
+  }
+}
