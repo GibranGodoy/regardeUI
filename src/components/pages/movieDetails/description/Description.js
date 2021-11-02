@@ -14,13 +14,13 @@ function Description(props) {
   return (
     <section className='descriptionAndGenres'>
       <div className="description">
-        <h5>Description</h5>
+        <h5>Descripción</h5>
         <p className="body-1">
           {props.description}
         </p>
       </div>
       <div className="genres">
-        <h5>Genres</h5>
+        <h5>Géneros</h5>
         <ul className='body-1'>{allGenres}</ul>
       </div>
     </section>

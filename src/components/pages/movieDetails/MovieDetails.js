@@ -4,6 +4,9 @@ import Footer from "../../common/footer/Footer";
 import "./movieDetails.scss";
 import MovieHeader from "./movieHeader/MovieHeader";
 import Description from "./description/Description";
+import Directors from "./directors/Directors";
+import Trailer from "./trailer/Trailer";
+import Cast from "./cast/Cast";
 
 const MovieDetails = (props) => {
   const [movie, setMovie] = React.useState([]);
@@ -26,7 +29,10 @@ const MovieDetails = (props) => {
   return (
     <>
       <MovieHeader movie={movie} />
-          <Description movieGenres={movie.genres} description={movie.description}/>
+      <Description movieGenres={movie.genres} description={movie.description} />
+      <Directors directors={movie.directors} />
+      <Trailer trailer={movie.trailer} />
+      <Cast cast={movie.cast}/>
       <Footer />
     </>
   );

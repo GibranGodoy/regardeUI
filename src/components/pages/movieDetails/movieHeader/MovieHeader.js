@@ -1,7 +1,6 @@
 import React from "react";
 import "./movieHeader.scss";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import StarIcon from "@mui/icons-material/Star";
 
 const MovieHeader = (props) => {

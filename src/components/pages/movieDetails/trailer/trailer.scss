@@ -1,0 +1,12 @@
+@import "../../../../css/index.scss";
+
+.trailer {
+  margin: 0 64px;
+  margin-top: 56px;
+  color: $text-white-100;
+  .trailerIframe {
+    margin-top: 16px;
+    width: 100%;
+    max-width: 867px;
+  }
+}
