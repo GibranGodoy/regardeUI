@@ -51,7 +51,7 @@ function App() {
               <Logout user={user} />
             </Route>
             <Route path="/movie/:id">
-              <MovieDetails />
+              <MovieDetails user={user} />
             </Route>
             <Route path="*" component={NotFound} />
           </Switch>

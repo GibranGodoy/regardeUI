@@ -1,0 +1,19 @@
+@import '../../../../css/index.scss';
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    margin: 0 64px;
+    gap: 56px;
+    margin-top: 56px;
+    
+    h5{
+        color: $text-white-100;
+    }
+    .commentsList{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin: 0 175px;
+    }
+}
