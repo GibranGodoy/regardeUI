@@ -41,6 +41,30 @@ const MovieDetails = (props) => {
     }
   }, [movie._id]);
 
+  const postComment = async (value, commentRate, movieId) => {
+    const response = await fetch(
+      "https://regardapi.herokuapp.com/v1/comments",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${props.user.token}`,
+        },
+        body: JSON.stringify({
+          movieId: movieId,
+          text: value,
+          rate: commentRate,
+        }),
+      }
+    );
+    if (response.ok) {
+      const data = await response.json();
+      setReviews(reviews.concat([data]));
+    } else {
+      alert("No fue posible publicar tu comentario");
+    }
+  };
+
   return (
     <>
       <MovieHeader movie={movie} />
@@ -53,6 +77,7 @@ const MovieDetails = (props) => {
         movieId={movie._id}
         user={props.user}
         setReviews={setReviews}
+        postComment={postComment}
       />
       <Footer />
     </>

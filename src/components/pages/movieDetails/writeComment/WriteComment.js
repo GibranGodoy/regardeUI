@@ -26,33 +26,9 @@ const WriteComment = (props) => {
     setValue(e.target.value);
   };
 
-  const postComment = async (value, commentRate, movieId) => {
-    const response = await fetch(
-      "https://regardapi.herokuapp.com/v1/comments",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${props.user.token}`,
-        },
-        body: JSON.stringify({
-          movieId: movieId,
-          text: value,
-          rate: commentRate,
-        }),
-      }
-    );
-    if (response.ok) {
-      const data = await response.json();
-      props.setReviews(data);
-    } else {
-      alert("No fue posible publicar tu comentario");
-    }
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    postComment(value, commentRate, props.movieId);
+    props.postComment(value, commentRate, props.movieId);
     setValue("");
   };
 
@@ -109,7 +85,7 @@ const WriteComment = (props) => {
           </p>
         </div>
         <div className="buttons">
-          <Button className="signup" variant="outlined" color="secondary">
+          <Button className="signup" variant="outlined" color="secondary" href='/signup'>
             Crear cuenta
           </Button>
           <Button
