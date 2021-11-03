@@ -3,32 +3,18 @@ import "./comments.scss";
 import SingleComment from "./SingleComment";
 
 function Comments(props) {
-  const [reviews, setReviews] = React.useState([]);
-
-  React.useEffect(() => {
-    if (props.movieId) {
-      const URL = `https://regardapi.herokuapp.com/v1/comments/ofmovie/${props.movieId}`;
-      const getComments = async () => {
-        const response = await fetch(URL);
-        const data = await response.json();
-        setReviews(data);
-      };
-      getComments();
-    }
-  }, [props.movieId]);
+  let allReviews;
+  if (props.reviews) {
+    allReviews = props.reviews.map((review, index) => (
+      <SingleComment key={index} review={ review}/>
+    ));
+  }
 
   return (
     <section className="comments">
       <h5>Comentarios</h5>
       <div className="commentsList">
-        {reviews.map((review, index) => (
-          <SingleComment key={index} review={review} />
-        ))}
-        {/* {
-                    review.map((e, i) =>
-                        <Review review= e />
-                    )
-                } */}
+        {allReviews}
       </div>
     </section>
   );

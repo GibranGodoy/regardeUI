@@ -1,31 +1,93 @@
 @import "../../../../css/index.scss";
 
-.writeComment{
-    margin: 0 64px;
-    margin-top: 56px;
-    h5{
-        color: $text-white-100;
+.writeComment {
+  margin: 0 64px;
+  margin-top: 56px;
+  h5 {
+    color: $text-white-100;
+  }
+  .loggedOut {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    align-items: center;
+    margin-top: 16px;
+    div {
+      h6 {
+        color: $text-white-400;
+      }
     }
-    .loggedOut{
+    .buttons {
+      // font-family: ;
+      display: flex;
+      gap: 80px;
+      .signup {
+        color: $text-white-400;
+        border: solid 2px $accents-accent-400;
+      }
+    }
+  }
+  .commentSection {
+    margin: 0 175px;
+    margin-top: 16px;
+    .commentForm {
+      display: flex;
+      flex-direction: column;
+      .rate {
         display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
         align-items: center;
+        gap: 32px;
+      }
+      .commentInput {
         margin-top: 16px;
-        div{
-            h6{
-                color: $text-white-400;
-            }
-        }
-        .buttons{
-            // font-family: ;
-            display: flex;
-            gap: 80px;
-            .signup{
-                color: $text-white-400;
-                border: solid 2px $accents-accent-400 ;
-            }
-        }
+        width: 100%;
+        background-color: white;
+        border-radius: 4px;
+        border: solid 1px $text-white-700;
+      }
+      .commentButton {
+        align-self: flex-end;
+        max-width: 182px;
+        width: 100%;
+
+        margin-top: 32px;
+      }
     }
+  }
 }
+
+label {
+  color: #8ca8ae !important;
+}
+
+.MuiFilledInput-underline::before {
+  border-bottom: 0 !important;
+  //   border-bottom-color: #8ca8ae !important;
+}
+.MuiFilledInput-underline::after {
+  // border-bottom: 0 !important;
+  border-bottom-color: #8ca8ae !important;
+}
+.MuiFilledInput-root fieldset {
+  border-color: #8ca8ae !important;
+}
+.MuiFilledInput-root:hover fieldset {
+  border-color: #8ca8ae !important;
+}
+
+.Mui-focused fieldset {
+  border-color: #8ca8ae !important;
+}
+
+// .MuiFilledInput-root {
+//       & fieldset {
+//         border-color: "#8ca8ae",
+//       }
+//       & :hover fieldset {
+//         border-color: "#8ca8ae",
+//       }
+//       .Mui-focused fieldset {
+//         border-color: "#8ca8ae",
+//       }
+//     }
