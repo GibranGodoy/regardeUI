@@ -13,6 +13,9 @@
 ### Log in page
 ![App Preview](./logIn.jpg?raw=true)
 
+### Movie details page
+![App Preview](./detailsPage.jpg?raw=true)
+
 ---
 
 [`Atrás`](../README.md)

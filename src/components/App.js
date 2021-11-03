@@ -7,6 +7,7 @@ import theme from "../css/ThemeConfig";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/home/Home";
 import NotFound from "./common/404/NotFound";
+import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import Logout from "./pages/logout/Logout";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
@@ -43,6 +44,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home user={user} movies={movies} />
+            </Route>
+            <Route exact path="/signup">
+              <Signup setUser={setUser} />
             </Route>
             <Route exact path="/login">
               <Login setUser={setUser} />

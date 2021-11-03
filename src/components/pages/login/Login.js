@@ -49,7 +49,7 @@ const Login = (props) => {
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <input
-          type="text"
+          type="email"
           placeholder="email"
           onChange={handleUserChange}
           value={userValue}
