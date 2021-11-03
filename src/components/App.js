@@ -2,7 +2,7 @@ import "../css/App.css";
 import React from "react";
 import PageHeader from "./common/header/Header";
 import AppBar from "@material-ui/core/AppBar";
-import { ThemeProvider } from "@material-ui/core/Styles";
+import { ThemeProvider } from "@material-ui/styles";
 import theme from "../css/ThemeConfig";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/home/Home";
