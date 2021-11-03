@@ -13,7 +13,6 @@ import WriteComment from "./writeComment/WriteComment";
 const MovieDetails = (props) => {
   const [movie, setMovie] = React.useState([]);
   const [reviews, setReviews] = React.useState([]);
-  const [flag, setFlag] = React.useState(false);
   const id = props.match.params.id;
 
   React.useEffect(() => {
