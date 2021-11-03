@@ -26,7 +26,7 @@ const Favorites = (props) => {
           </p>
         </div>
         <div className="buttons">
-          <Button className="signup" variant="outlined" color="secondary">
+          <Button className="signup" variant="outlined" color="secondary" href='/signup'>
             Crear cuenta
           </Button>
           <Button
