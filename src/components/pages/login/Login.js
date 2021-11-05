@@ -45,23 +45,32 @@ const Login = (props) => {
   };
 
   return (
-    <div className="login">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="email"
-          onChange={handleUserChange}
-          value={userValue}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          onChange={handlePasswordChange}
-          value={passwordValue}
-        />
-        <button type="submit">Login</button>
-      </form>
+    <div className="loginPage">
+      <div className="loginCard">
+        <h3>Iniciar sesión</h3>
+        <p className="body-1 loginSubtitle">
+          Inicia sesión en tu cuenta para continuar
+        </p>
+        <form onSubmit={handleSubmit} className="loginForm">
+          <p className="body-1 text">Correo</p>
+          <input
+            type="email"
+            placeholder="correo"
+            onChange={handleUserChange}
+            value={userValue}
+            className="body-1"
+          />
+          <p className="body-1 text">Contraseña</p>
+          <input
+            type="password"
+            placeholder="contraseña"
+            onChange={handlePasswordChange}
+            value={passwordValue}
+            className="body-1"
+          />
+          <button type="submit" className="loginButton">Login</button>
+        </form>
+      </div>
     </div>
   );
 };

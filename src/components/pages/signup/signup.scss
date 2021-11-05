@@ -1,5 +1,72 @@
-@import '../../../css/index.scss';
+@import "../../../css/index.scss";
 
-.signup{
-    margin-top: 100px;
+.signupPage {
+  background-image: url("../../../css/signupBg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  h3 {
+    color: $accents-accent-700;
+    text-align: center;
+  }
+  .signupCard {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background-bg-100;
+    width: 40%;
+    min-width: 444px;
+    height: 100%;
+    padding: 0 40px;
+    padding-top: 100px;
+    box-shadow: 8px 0px 24px 5px rgba(0, 0, 0, 0.25);
+    .signupSubtitle {
+      text-align: center;
+      margin-top: 40px;
+      color: $text-black-500;
+    }
+    .signupForm {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .nameSection{
+        display: flex;
+        width: 100%;
+        gap: 24px;
+        div{
+            width: 100%;
+            input{
+                width: 100%;
+            }
+        }
+      }
+      .text {
+        color: $text-black-500;
+        margin-top: 24px;
+        margin-bottom: 16px;
+      }
+      input {
+        color: $text-white-700;
+        padding: 16px 24px;
+        border-radius: 8px;
+        border: 1px solid $text-white-700;
+      }
+      input:focus {
+        outline: none;
+        color: $text-black-500;
+        border: 1px solid $accents-accent-700;
+      }
+      .signupButton {
+        margin-top: 24px;
+        padding: 8px 0;
+        border: none;
+        border-radius: 8px;
+        color: $text-black-900;
+        background-color: $accents-accent-400;
+      }
+    }
+  }
 }
