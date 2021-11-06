@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "../section/Section";
-import Card from "../../../containers/carousel/Card.js";
+import Card from "../card/Card";
 import "./movieslist.scss";
 
 
