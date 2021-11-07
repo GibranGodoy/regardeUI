@@ -25,6 +25,7 @@ const MoviesTop = (props) => {
 
   return (
     <>
+    
       <Banner />
       <MoviesTop5 movie={movie} />
       <Footer />
