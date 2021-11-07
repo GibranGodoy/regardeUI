@@ -59,12 +59,6 @@ export default function Review(props) {
       <div>
         <header>
           <h6>{props.review.movie.title}</h6>
-          {/* <Rating
-            name="half-rating-read"
-            value={props.review.rate}
-            precision={0.5}
-            readOnly
-          /> */}
           <StyledRating
             name="customized-color"
             value={props.review.rate}

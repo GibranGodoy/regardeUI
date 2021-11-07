@@ -2,17 +2,24 @@ import Button from "@material-ui/core/Button";
 import React from "react";
 import Card from "../../../containers/carousel/Card";
 import "./favorites.scss";
-import { favorites } from "../../../data";
+// import { favorites } from "../../../data";
 
 const Favorites = (props) => {
-  // status = { isLogin: true }
   let content;
 
   if (props.user) {
     content = (
       <div className="movies-deck">
-        {favorites.map((favorite, index) => {
-          return <Card key={index} {...favorite} />;
+        {props.favorites.map((favorite, index) => {
+          return (
+            <Card
+              key={index}
+              {...favorite}
+              id={favorite._id}
+              isFavorite={props.isFavorite}
+              favoriteState={true}
+            />
+          );
         })}
       </div>
     );
@@ -26,7 +33,12 @@ const Favorites = (props) => {
           </p>
         </div>
         <div className="buttons">
-          <Button className="signup" variant="outlined" color="secondary" href='/signup'>
+          <Button
+            className="signup"
+            variant="outlined"
+            color="secondary"
+            href="/signup"
+          >
             Crear cuenta
           </Button>
           <Button
