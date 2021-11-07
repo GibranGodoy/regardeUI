@@ -11,6 +11,9 @@ import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import Logout from "./pages/logout/Logout";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
+import Movies from "./pages/movies/Movies";
+import MoviesTop from "./pages/moviesPopulares/MoviesTop";
+import MoviesRecents from "./pages/moviesRecents/MoviesRecents";
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -25,6 +28,8 @@ function App() {
     };
     getMovies();
   }, []);
+
+
 
   React.useEffect(() => {
     const loggedUserJson = window.localStorage.getItem("loggedUser");
@@ -57,6 +62,16 @@ function App() {
             <Route path="/movie/:id">
               <MovieDetails user={user} />
             </Route>
+            <Route exact path="/peliculas">
+              <Movies user={user} movies={movies} />
+            </Route>
+             <Route path="/peliculasPopulares">
+              <MoviesTop movies={movies} user={user}/>
+            </Route>
+             <Route path="/peliculasRecientes">
+              <MoviesRecents movies={movies} user={user}/>
+            </Route>
+
             <Route path="*" component={NotFound} />
           </Switch>
         </Router>

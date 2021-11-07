@@ -1,26 +1,12 @@
 import React from "react";
 import Section from "../section/Section";
 import Card from "../../../containers/carousel/Card.js";
-import "./movieslist.scss";
+import "../moviesList/movieslist.scss";
 import Link from "@material-ui/core/Link";
 
+function MovieTop(props) {
 
-function moviesList(props) {
-    // // eslint-disable-next-line react-hooks/rules-of-hooks
-    // const [movies, setMovies] = React.useState([]);
-
-    // // eslint-disable-next-line react-hooks/rules-of-hooks
-    // React.useEffect(() => {
-    //     const URL = "https://regardapi.herokuapp.com/v1/movies";
-    //     const getMovies = async () => {
-    //         const response = await fetch(URL);
-    //         const data = await response.json();
-    //         setMovies(data);
-    //     }
-    //     getMovies();
-    // }, [])
-
-    return (
+   return (
     <section className="moviesList">
         <div className="information">
             <Section title={"Descubre más películas"} />
@@ -37,7 +23,8 @@ function moviesList(props) {
         </div>
 
         <div className="movies-deck">
-            {props.movies.map((movie, index) => {
+            {props.movie.map((movie, index) => {
+              console.log(props.movie)
             let position =  index > 0 ? "nextCard" : index === 0 ? "activeCard" : "prevCard";
             return <Card className="Card" {...movie} key={index} id={movie._id} cardStyle={position} />;
             })}
@@ -47,8 +34,8 @@ function moviesList(props) {
 
     </section>
     );
-}
+      }
 
-export default moviesList;
 
+export default (MovieTop);
 

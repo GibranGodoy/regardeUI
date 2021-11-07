@@ -1,0 +1,26 @@
+@import '../../../css/index.scss';
+
+.moviesAll{
+    margin-top: 136px;
+    margin-bottom: 75px;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+    color: $text-white-400;
+}
+
+.movies-Alldeck{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+    font-size: 0;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+
