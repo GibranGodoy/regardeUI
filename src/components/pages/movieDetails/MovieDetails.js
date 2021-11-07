@@ -41,6 +41,7 @@ const MovieDetails = (props) => {
     }
   }, [movie._id]);
 
+
   const postComment = async (value, commentRate, movieId) => {
     const response = await fetch(
       "https://regardapi.herokuapp.com/v1/comments",
@@ -67,7 +68,7 @@ const MovieDetails = (props) => {
 
   return (
     <>
-      <MovieHeader movie={movie} />
+      <MovieHeader movie={movie} favorites={props.favorites} />
       <Description movieGenres={movie.genres} description={movie.description} />
       <Directors directors={movie.directors} />
       <Trailer trailer={movie.trailer} />

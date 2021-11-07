@@ -18,6 +18,7 @@ const Favorites = (props) => {
               id={favorite._id}
               isFavorite={props.isFavorite}
               favoriteState={true}
+              favorites={props.favorites}
             />
           );
         })}

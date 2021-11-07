@@ -26,10 +26,8 @@ function moviesList(props) {
               key={index}
               id={movie._id}
               cardStyle={position}
-            //   addFavorites={props.addFavorites}
-            //   removeFavorites={props.removeFavorites}
-            //   favoriteState={false}
-                  isFavorite={props.isFavorite}
+              favorites={props.favorites}
+              isFavorite={props.isFavorite}
             />
           );
         })}

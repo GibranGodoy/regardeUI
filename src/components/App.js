@@ -51,9 +51,7 @@ function App() {
         });
         const data = await response.json();
         setFavorites(data.favorites);
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     };
     getFavorites();
   }, [favorites, user]);

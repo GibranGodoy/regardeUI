@@ -4,6 +4,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import StarIcon from "@mui/icons-material/Star";
 
 const MovieHeader = (props) => {
+
   return (
     <div className="movieHeader">
       <img

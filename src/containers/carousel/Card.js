@@ -5,20 +5,20 @@ import { faStar, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
 // import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
-const Card = ({ title, poster, rate, id, addFavorites, removeFavorites, favoriteState, isFavorite }) => {
+const Card = ({ title, poster, rate, id, isFavorite, favorites }) => {
   const history = useHistory();
   const handleClick = () => {
     history.push(`/movie/${id}`);
   };
-  // let isFavorite = false;
+
   const handleFavorites = () => {
     isFavorite(id);
-    // if (!isFavorite && !favoriteState) {
-    //   addFavorites(id);
-    //   isFavorite = true;
-    // }
-    // removeFavorites(id);
   };
+
+  let movieSaved;
+  if (favorites) {
+    movieSaved = favorites.find((movie) => movie._id === id);
+  }
 
   return (
     <div className="card-container">
@@ -38,7 +38,10 @@ const Card = ({ title, poster, rate, id, addFavorites, removeFavorites, favorite
               {rate}
             </p>
           </div>
-          <div className="heart" onClick={handleFavorites}>
+          <div
+            className={`heart ${movieSaved ? "saved" : ""}`}
+            onClick={handleFavorites}
+          >
             {/* <FavoriteBorderIcon className="heartIcon" /> */}
             <FontAwesomeIcon icon={faHeart} />
           </div>
