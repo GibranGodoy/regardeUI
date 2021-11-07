@@ -3,7 +3,6 @@ import "./Card.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
-// import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 const Card = ({ title, poster, rate, id, isFavorite, favorites }) => {
   const history = useHistory();
@@ -42,7 +41,6 @@ const Card = ({ title, poster, rate, id, isFavorite, favorites }) => {
             className={`heart ${movieSaved ? "saved" : ""}`}
             onClick={handleFavorites}
           >
-            {/* <FavoriteBorderIcon className="heartIcon" /> */}
             <FontAwesomeIcon icon={faHeart} />
           </div>
         </div>

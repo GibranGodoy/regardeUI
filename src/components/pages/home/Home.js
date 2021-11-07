@@ -31,7 +31,6 @@ const Home = (props) => {
           text: "Iniciar sesión",
         },
       }).then((value) => {
-        console.log(value);
         if (value) {
           history.push("/login");
         }

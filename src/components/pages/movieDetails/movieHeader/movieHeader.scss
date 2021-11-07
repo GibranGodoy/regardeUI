@@ -61,11 +61,15 @@
         display: flex;
         align-items: center;
         gap: 8px;
+        cursor: pointer;
         .body-1 {
           color: $text-black-500;
         }
         span{
           height: 24px;
+        }
+        .filledHeart {
+          color: #ff2828;
         }
       }
       .rate{
