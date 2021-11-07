@@ -11,8 +11,6 @@ _Diseño y Desarrollo de una interfaz de usuario usando ReactJS_
 
 * [React](https://es.reactjs.org/) - Biblioteca de JavaScript para construir interfaces de usuario.
 * [React-router-dom](https://reactrouter.com/web/guides/quick-start) - Libería para gestionar rutas en aplicaciones que utilicen ReactJS.
-* [Webpack](https://webpack.js.org/) - Paquete de módulos de JavaScript de código abierto.
-* [Babel](https://babeljs.io/) - Herramienta para transformar código JS de última generación a un código JS que cualquier navegador pueda entender.
 * [Node.js](https://nodejs.dev/) - Hace referencia al entorno de ejecución de JavaScript utilizado.
 * [Material UI](https://mui.com/) - Librería de componentes de React con estílos predefinidos.
 * [Sass](https://sass-lang.com/) - Preprocesador CSS para generar de forma automática hojas de estilo.
