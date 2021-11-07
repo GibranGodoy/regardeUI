@@ -11,6 +11,7 @@ import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import Logout from "./pages/logout/Logout";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
+import AllMovies from "./pages/allMovies/AllMovies";
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -96,6 +97,15 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home
+                user={user}
+                movies={movies}
+                favorites={favorites}
+                addFavorites={addFavorites}
+                removeFavorites={removeFavorites}
+              />
+            </Route>
+            <Route exact path="/movies">
+              <AllMovies
                 user={user}
                 movies={movies}
                 favorites={favorites}
