@@ -11,13 +11,18 @@ import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import Logout from "./pages/logout/Logout";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
+<<<<<<< HEAD
 import Movies from "./pages/movies/Movies";
 import MoviesTop from "./pages/moviesPopulares/MoviesTop";
 import MoviesRecents from "./pages/moviesRecents/MoviesRecents";
+=======
+import AllMovies from "./pages/allMovies/AllMovies";
+>>>>>>> 221437e0b764ac5b99773f26eb7c5f7c1a808066
 
 function App() {
   const [user, setUser] = React.useState(null);
   const [movies, setMovies] = React.useState([]);
+  const [favorites, setFavorites] = React.useState([]);
 
   React.useEffect(() => {
     const URL = "https://regardapi.herokuapp.com/v1/movies";
@@ -39,6 +44,57 @@ function App() {
     }
   }, []);
 
+  React.useEffect(() => {
+    const url = "https://regardapi.herokuapp.com/v1/user";
+
+    const getFavorites = async () => {
+      try {
+        const user = JSON.parse(window.localStorage.getItem("loggedUser"));
+        const id = user.id;
+        const response = await fetch(`${url}/${id}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${user.token}`,
+          },
+        });
+        const data = await response.json();
+        setFavorites(data.favorites);
+      } catch (error) {}
+    };
+    getFavorites();
+  }, [favorites, user]);
+
+  const addFavorites = async (movieId) => {
+    const url = "https://regardapi.herokuapp.com/v1/user/add-to-favorites";
+    const id = user.id;
+    await fetch(`${url}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${user.token}`,
+      },
+      body: JSON.stringify({
+        movie: movieId,
+      }),
+    });
+  };
+
+  const removeFavorites = async (movieId) => {
+    const url = "https://regardapi.herokuapp.com/v1/user/remove-from-favorites";
+    const id = user.id;
+    await fetch(`${url}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${user.token}`,
+      },
+      body: JSON.stringify({
+        movie: movieId,
+      }),
+    });
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <div className="app">
@@ -48,7 +104,22 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/">
-              <Home user={user} movies={movies} />
+              <Home
+                user={user}
+                movies={movies}
+                favorites={favorites}
+                addFavorites={addFavorites}
+                removeFavorites={removeFavorites}
+              />
+            </Route>
+            <Route exact path="/movies">
+              <AllMovies
+                user={user}
+                movies={movies}
+                favorites={favorites}
+                addFavorites={addFavorites}
+                removeFavorites={removeFavorites}
+              />
             </Route>
             <Route exact path="/signup">
               <Signup setUser={setUser} />
@@ -60,7 +131,12 @@ function App() {
               <Logout user={user} />
             </Route>
             <Route path="/movie/:id">
-              <MovieDetails user={user} />
+              <MovieDetails
+                user={user}
+                favorites={favorites}
+                addFavorites={addFavorites}
+                removeFavorites={removeFavorites}
+              />
             </Route>
             <Route exact path="/peliculas">
               <Movies user={user} movies={movies} />

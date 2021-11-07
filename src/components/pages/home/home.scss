@@ -1,0 +1,16 @@
+@import "../../../css/index.scss";
+
+.swal-button--text {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: $accents-accent-400;
+  color: $text-black-900;
+}
+
+
+.swal-button--cancel{
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: white;
+  border : 1px solid $accents-accent-400;
+}

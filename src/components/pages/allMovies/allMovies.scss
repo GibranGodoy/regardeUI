@@ -1,0 +1,11 @@
+@import "../../../css/index.scss";
+
+.moviesListPage {
+  margin-top: 102px;
+  .information {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: $accents-accent-400;
+  }
+}

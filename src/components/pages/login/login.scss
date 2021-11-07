@@ -1,5 +1,63 @@
-@import '../../../css/index.scss';
+@import "../../../css/index.scss";
 
-.login{
-    margin-top: 100px;
+.loginPage {
+  background-image: url("../../../css/loginBg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  h3 {
+    color: $accents-accent-700;
+    text-align: center;
+  }
+  .loginCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background-bg-100;
+    width: 40%;
+    min-width: 444px;
+    height: 100%;
+    padding: 0 40px;
+    padding-top: 100px;
+    box-shadow: 8px 0px 24px 5px rgba(0, 0, 0, 0.25);
+    .loginSubtitle {
+      text-align: center;
+      margin-top: 40px;
+      color: $text-black-500;
+    }
+    .loginForm {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .text {
+        color: $text-black-500;
+        margin-top: 24px;
+        margin-bottom: 16px;
+      }
+      input {
+        color: $text-white-700;
+        padding: 16px 24px;
+        border-radius: 8px;
+        border: 1px solid $text-white-700;
+      }
+      input:focus {
+        outline: none;
+        color: $text-black-500;
+        border: 1px solid $accents-accent-700;
+      }
+      .loginButton {
+        margin-top: 24px;
+        padding: 8px 0;
+        border: none;
+        border-radius: 8px;
+        color: $text-black-900;
+        background-color: $accents-accent-400;
+      }
+      .loginButton:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }

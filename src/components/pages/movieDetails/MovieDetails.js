@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, useHistory } from "react-router-dom";
 import Footer from "../../common/footer/Footer";
 import "./movieDetails.scss";
 import MovieHeader from "./movieHeader/MovieHeader";
@@ -9,6 +9,8 @@ import Trailer from "./trailer/Trailer";
 import Cast from "./cast/Cast";
 import Comments from "./comments/Comments";
 import WriteComment from "./writeComment/WriteComment";
+import swal from "sweetalert";
+
 
 const MovieDetails = (props) => {
   const [movie, setMovie] = React.useState([]);
@@ -41,6 +43,17 @@ const MovieDetails = (props) => {
     }
   }, [movie._id]);
 
+  let movieSaved;
+  if (props.favorites) {
+    movieSaved = props.favorites.find((fav) => fav._id === movie._id);
+    if (movieSaved) {
+      console.log(true);
+    }
+    else {
+      console.log(false);
+    }
+  }
+
   const postComment = async (value, commentRate, movieId) => {
     const response = await fetch(
       "https://regardapi.herokuapp.com/v1/comments",
@@ -65,9 +78,44 @@ const MovieDetails = (props) => {
     }
   };
 
+
+
+
+  let history = useHistory();
+  const isFavorite = (movieId) => {
+    if (props.user) {
+      if (props.favorites.find((fav) => fav._id === movieId)) {
+        props.removeFavorites(movieId);
+      } else {
+        props.addFavorites(movieId);
+      }
+    } else {
+      swal({
+        text: "Debes iniciar sesión para agregar a favoritos",
+        className: "body-1",
+        buttons: {
+          cancel: {
+            text: "Cancelar",
+            value: null,
+            visible: true,
+            closeModal: true,
+          },
+          text: "Iniciar sesión",
+        },
+      }).then((value) => {
+        if (value) {
+          history.push("/login");
+        }
+      });
+    }
+  };
+
+
+
+
   return (
     <>
-      <MovieHeader movie={movie} />
+      <MovieHeader movie={movie} favorites={props.favorites} movieSaved={movieSaved} isFavorite={isFavorite} />
       <Description movieGenres={movie.genres} description={movie.description} />
       <Directors directors={movie.directors} />
       <Trailer trailer={movie.trailer} />

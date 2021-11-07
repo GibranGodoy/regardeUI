@@ -53,7 +53,14 @@ const Signup = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    signup(usernameValue, nameValue, lastnameValue, emailValue, passwordValue, typeUserValue);
+    signup(
+      usernameValue,
+      nameValue,
+      lastnameValue,
+      emailValue,
+      passwordValue,
+      typeUserValue
+    );
     setUsernameValue("");
     setNameValue("");
     setLastnameValue("");
@@ -62,41 +69,66 @@ const Signup = (props) => {
   };
 
   return (
-    <div className="signup">
-      <h1>Signup</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="username"
-          onChange={handleUsernameChange}
-          value={usernameValue}
-        />
-        <input
-          type="text"
-          placeholder="name"
-          onChange={handleNameChange}
-          value={nameValue}
-        />
-        <input
-          type="text"
-          placeholder="lastname"
-          onChange={handleLastnameChange}
-          value={lastnameValue}
-        />
-        <input
-          type="email"
-          placeholder="email"
-          onChange={handleEmailChange}
-          value={emailValue}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          onChange={handlePasswordChange}
-          value={passwordValue}
-        />
-        <button type="submit">Signup</button>
-      </form>
+    <div className="signupPage">
+      <div className="signupCard">
+        <h3>Registro</h3>
+        <p className="body-1 signupSubtitle">
+          Registrate para comenzar a escribir reseñas de las películas que has
+          visto
+        </p>
+        <form onSubmit={handleSubmit} className="signupForm">
+          <div className="nameSection">
+            <div>
+            <p className="body-1 text">Nombre</p>
+            <input
+              type="text"
+              placeholder="Nombre"
+              onChange={handleNameChange}
+              value={nameValue}
+              className="body-1"
+            />
+            </div>
+            <div>
+            <p className="body-1 text">Apellido</p>
+            <input
+              type="text"
+              placeholder="Apellido"
+              onChange={handleLastnameChange}
+              value={lastnameValue}
+              className="body-1"
+            />
+            </div>
+          </div>
+          <p className="body-1 text">Usuario</p>
+          <input
+            type="text"
+            placeholder="Usuario"
+            onChange={handleUsernameChange}
+            value={usernameValue}
+            className="body-1"
+          />
+
+          <p className="body-1 text">Correo</p>
+          <input
+            type="email"
+            placeholder="Correo"
+            onChange={handleEmailChange}
+            value={emailValue}
+            className="body-1"
+          />
+          <p className="body-1 text">Contraseña</p>
+          <input
+            type="password"
+            placeholder="Contraseña"
+            onChange={handlePasswordChange}
+            value={passwordValue}
+            className="body-1"
+          />
+          <button type="submit" className="signupButton">
+            Signup
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -2,6 +2,8 @@ import React from "react";
 import "./review.scss";
 import Rating from "@mui/material/Rating";
 import { Avatar } from "@material-ui/core";
+import { styled } from "@mui/material/styles";
+import StarIcon from "@mui/icons-material/Star";
 
 export default function Review(props) {
   function stringToColor(string) {
@@ -33,6 +35,18 @@ export default function Review(props) {
     };
   }
 
+    const StyledRating = styled(Rating)({
+      "& .MuiRating-iconFilled": {
+        color: "#e0b746",
+      },
+      "& .MuiRating-iconHover": {
+        color: "#dfa000",
+      },
+      "& .MuiRating-iconEmpty": {
+        color: "#8ca8ae",
+      },
+    });
+
   return (
     <div className="review">
       <Avatar
@@ -45,11 +59,14 @@ export default function Review(props) {
       <div>
         <header>
           <h6>{props.review.movie.title}</h6>
-          <Rating
-            name="half-rating-read"
+          <StyledRating
+            name="customized-color"
             value={props.review.rate}
             precision={0.5}
             readOnly
+            icon={<StarIcon fontSize="inherit" />}
+            emptyIcon={<StarIcon fontSize="inherit" />}
+            className="rating"
           />
         </header>
         <p className="caption">

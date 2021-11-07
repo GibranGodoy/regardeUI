@@ -1,14 +1,11 @@
-import Banner from "../../common/banner/Banner";
-import MoviesList from "../../common/moviesList/MoviesList";
-import Favorites from "../../common/favorites/Favorites";
-import ReviewList from "../../common/reviews/ReviewList";
+import Card from "../../../containers/carousel/Card";
 import Footer from "../../common/footer/Footer";
 import React from "react";
 import { withRouter, useHistory } from "react-router-dom";
 import swal from "sweetalert";
-import './home.scss'
+import "./allMovies.scss";
 
-const Home = (props) => {
+const AllMovies = (props) => {
   let history = useHistory();
   const isFavorite = (movieId) => {
     if (props.user) {
@@ -40,22 +37,31 @@ const Home = (props) => {
 
   return (
     <>
-      <Banner />
-      <MoviesList
-        movies={props.movies}
-        favorites={props.favorites}
-        isFavorite={isFavorite}
-      />
-      <Favorites
-        user={props.user}
-        favorites={props.favorites}
-        movies={props.movies}
-        isFavorite={isFavorite}
-      />
-      <ReviewList />
+      <section className="moviesListPage">
+        <div className="information">
+          <h3>Todas las películas</h3>
+        </div>
+        <div className="movies-deck">
+          {props.movies.map((movie, index) => {
+            let position =
+              index > 0 ? "nextCard" : index === 0 ? "activeCard" : "prevCard";
+            return (
+              <Card
+                className="Card"
+                {...movie}
+                key={index}
+                id={movie._id}
+                cardStyle={position}
+                favorites={props.favorites}
+                isFavorite={isFavorite}
+              />
+            );
+          })}
+        </div>
+      </section>
       <Footer />
     </>
   );
 };
 
-export default withRouter(Home);
+export default withRouter(AllMovies);
