@@ -46,12 +46,6 @@ const MovieDetails = (props) => {
   let movieSaved;
   if (props.favorites) {
     movieSaved = props.favorites.find((fav) => fav._id === movie._id);
-    if (movieSaved) {
-      console.log(true);
-    }
-    else {
-      console.log(false);
-    }
   }
 
   const postComment = async (value, commentRate, movieId) => {
