@@ -16,6 +16,7 @@ _Diseño y Desarrollo de una interfaz de usuario usando ReactJS_
 * [Node.js](https://nodejs.dev/) - Hace referencia al entorno de ejecución de JavaScript utilizado.
 * [Material UI](https://mui.com/) - Librería de componentes de React con estílos predefinidos.
 * [Sass](https://sass-lang.com/) - Preprocesador CSS para generar de forma automática hojas de estilo.
+* [Sweet Alert](https://sweetalert2.github.io/) - Plugin de jQuery para mostrar mensajes personalizados en pantalla.
 
 ### ⚙️ Herramientas empleadas:
 
