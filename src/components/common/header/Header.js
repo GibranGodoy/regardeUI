@@ -2,9 +2,7 @@ import React from "react";
 import "./header.scss";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import SearchIcon from "@material-ui/icons/Search";
 import Link from "@material-ui/core/Link";
 
 export default function PageHeader(props) {
@@ -15,25 +13,21 @@ export default function PageHeader(props) {
         <Typography className="title" variant="h5">
           Regarde
         </Typography>
-        <Link
-          className="linkInicio"
-          color="inherit"
-          href="/"
-        >
+        <Link className="linkInicio" color="inherit" href="/">
           Inicio
         </Link>
 
         <div className="buttons">
-          <IconButton
+          {/* <IconButton
             className="searchButton"
             aria-label="search"
             color="inherit"
           >
             <SearchIcon />
-          </IconButton>
+          </IconButton> */}
 
           <Button className="peliculas" color="inherit">
-            <Link underline="none" href="/peliculas" color="inherit">
+            <Link underline="none" href="/movies" color="inherit">
               Peliculas
             </Link>
           </Button>
@@ -57,25 +51,21 @@ export default function PageHeader(props) {
         <Typography className="title" variant="h5">
           Regarde
         </Typography>
-        <Link
-          className="linkInicio"
-          color="inherit"
-          href="/"
-        >
+        <Link className="linkInicio" color="inherit" href="/">
           Inicio
         </Link>
 
         <div className="buttons">
-          <IconButton
+          {/* <IconButton
             className="searchButton"
             aria-label="search"
             color="inherit"
           >
             <SearchIcon />
-          </IconButton>
+          </IconButton> */}
 
           <Button className="peliculas" color="inherit">
-            <Link underline="none" href="/peliculas" color="inherit">
+            <Link underline="none" href="/movies" color="inherit">
               Peliculas
             </Link>
           </Button>
@@ -90,9 +80,5 @@ export default function PageHeader(props) {
     );
   }
 
-  return (
-    <div className="root">
-      {content}
-    </div>
-  );
+  return <div className="root">{content}</div>;
 }
