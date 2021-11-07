@@ -1,9 +1,13 @@
 import React from "react";
 import "./movieHeader.scss";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import StarIcon from "@mui/icons-material/Star";
 
 const MovieHeader = (props) => {
+    const handleFavorites = () => {
+      props.isFavorite(props.movie._id);
+    };
   return (
     <div className="movieHeader">
       <img
@@ -20,16 +24,26 @@ const MovieHeader = (props) => {
         <h3>{props.movie.title}</h3>
         <h5>{props.movie.year}</h5>
         <div className="favoritesAndRate">
-          <div className="favorites">
-            <p className="body-1">Agregar a favoritos</p>
-
-            <span>
-              <FavoriteBorderIcon />
-            </span>
+          <div className="favorites" onClick={handleFavorites}>
+            {props.movieSaved ? (
+              <>
+                <p className="body-1">Quitar de favoritos</p>
+                <span>
+                  <FavoriteIcon className="filledHeart"/>
+                </span>
+              </>
+            ) : (
+              <>
+                <p className="body-1">Agregar a favoritos</p>
+                <span>
+                  <FavoriteBorderIcon />
+                </span>
+              </>
+            )}
           </div>
           <div className="rate">
             <span>
-              <StarIcon fontSize="large" className="star"/>
+              <StarIcon fontSize="large" className="star" />
             </span>
             <h4>{props.movie.rate}</h4>
           </div>

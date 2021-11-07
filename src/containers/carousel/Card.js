@@ -4,12 +4,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
 
-const Card = ({ title, poster, rate, id }) => {
+const Card = ({ title, poster, rate, id, isFavorite, favorites }) => {
   const history = useHistory();
   const handleClick = () => {
     history.push(`/movie/${id}`);
   };
-  
+
+  const handleFavorites = () => {
+    isFavorite(id);
+  };
+
+  let movieSaved;
+  if (favorites) {
+    movieSaved = favorites.find((movie) => movie._id === id);
+  }
+
   return (
     <div className="card-container">
       <div className="card-img">
@@ -28,7 +37,10 @@ const Card = ({ title, poster, rate, id }) => {
               {rate}
             </p>
           </div>
-          <div className="heart">
+          <div
+            className={`heart ${movieSaved ? "saved" : ""}`}
+            onClick={handleFavorites}
+          >
             <FontAwesomeIcon icon={faHeart} />
           </div>
         </div>
