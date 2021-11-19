@@ -11,13 +11,11 @@ import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import Logout from "./pages/logout/Logout";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
-<<<<<<< HEAD
 import Movies from "./pages/movies/Movies";
 import MoviesTop from "./pages/moviesPopulares/MoviesTop";
 import MoviesRecents from "./pages/moviesRecents/MoviesRecents";
-=======
 import AllMovies from "./pages/allMovies/AllMovies";
->>>>>>> 221437e0b764ac5b99773f26eb7c5f7c1a808066
+
 
 function App() {
   const [user, setUser] = React.useState(null);
