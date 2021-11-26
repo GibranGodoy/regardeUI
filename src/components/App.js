@@ -28,6 +28,7 @@ function App() {
     getMovies();
   }, []);
 
+
   React.useEffect(() => {
     const loggedUserJson = window.localStorage.getItem("loggedUser");
     if (loggedUserJson) {

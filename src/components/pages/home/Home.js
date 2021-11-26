@@ -1,6 +1,5 @@
 import Banner from "../../common/banner/Banner";
 import MoviesList from "../../common/moviesList/MoviesList";
-import Favorites from "../../common/favorites/Favorites";
 import ReviewList from "../../common/reviews/ReviewList";
 import Footer from "../../common/footer/Footer";
 import React from "react";
@@ -42,14 +41,9 @@ const Home = (props) => {
     <>
       <Banner />
       <MoviesList
-        movies={props.movies}
-        favorites={props.favorites}
-        isFavorite={isFavorite}
-      />
-      <Favorites
         user={props.user}
-        favorites={props.favorites}
         movies={props.movies}
+        favorites={props.favorites}
         isFavorite={isFavorite}
       />
       <ReviewList />

@@ -13,10 +13,11 @@ export default function PageHeader(props) {
         <Typography className="title" variant="h5">
           Regarde
         </Typography>
-        <Link className="linkInicio" color="inherit" href="/">
+        <Button className="Inicio" color="inherit">
+        <Link underline= "none" className="linkInicio" color="inherit" href="/">
           Inicio
         </Link>
-
+        </Button>
         <div className="buttons">
           {/* <IconButton
             className="searchButton"

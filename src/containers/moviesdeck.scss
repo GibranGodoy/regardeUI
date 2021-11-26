@@ -1,0 +1,18 @@
+@import '../css/index.scss';
+
+
+
+.movies-deck{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px 100px;
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+    font-size: 0;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+    padding-bottom: 10px;
+}

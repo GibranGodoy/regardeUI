@@ -21,18 +21,16 @@
             text-decoration: underline;
             font-family: 'Montserrat', sans-serif;
         }
-        h6{
-            color:$text-white-400;
-            font-weight: normal;
-            font-family: 'Montserrat', sans-serif;
-            margin-right: 60px;
+        .muiBotton-label{
+            text-align: center;
         }
-        h6 span{
+        .buttons {
             color:$text-white-400;
-            font-weight: normal;
-            font-family: 'Montserrat', sans-serif;
-            margin-right: 60px;
-    
+            width: 80%;
+            align-content: center;
+            display: flex;
+            gap: 40px;
+            margin-right: 80px;
         }
     }
 }
