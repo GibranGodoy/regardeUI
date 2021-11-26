@@ -1,24 +1,95 @@
 import React from "react";
 import Section from "../section/Section";
-import Card from "../../../containers/carousel/Card.js";
+import MoviesDeck from "../../../containers/MoviesDeck.js";
+import Favorites from "../favorites/Favorites.js"
 import "./movieslist.scss";
-import Link from "@material-ui/core/Link";
 import Button from "@material-ui/core/Button";
 
-function moviesList(props) {
-    // // eslint-disable-next-line react-hooks/rules-of-hooks
-    // const [popularMovies, setPopularMovies] = React.useState([]);
 
+
+const MoviesList = (props) => {
     // // eslint-disable-next-line react-hooks/rules-of-hooks
-    // React.useEffect(() => {
-    //   const URL = "https://regardapi.herokuapp.com/v1/movies/top5";
-    //   const getPopularMovies = async () => {
-    //     const response = await fetch(URL);
-    //     const data = await response.json();
-    //     setPopularMovies(data);
-    //   };
-    //   getPopularMovies();
-    // }, []);
+    const [popularMovies, setPopularMovies] = React.useState([]);
+    const [recentsMovies, setRecentsMovies] = React.useState([]);
+    const [movie, setValue] = React.useState("");
+
+    let content;
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    React.useEffect(() => {
+      const URL = "https://regardapi.herokuapp.com/v1/movies/top5";
+      const getPopularMovies = async () => {
+        const response = await fetch(URL);
+        const data = await response.json();
+        setPopularMovies(data);
+      };
+      getPopularMovies();
+    }, []);
+
+    React.useEffect(() => {
+    const URL = "https://regardapi.herokuapp.com/v1/movies/recents";
+    const getMovie = async () => {
+      try {
+        const response = await fetch(`${URL}`);
+        const movie = await response.json();
+        setRecentsMovies(movie);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getMovie();
+  }, []);
+
+
+    const handlePopularClick = () => {
+      setValue('popular');
+      console.log(movie)
+    };
+
+    const handleRecientesClick = () => {
+      setValue('recents');
+      console.log(movie)
+    };
+
+    const handleFavoritosClick = () => {
+      setValue('favorites');
+      console.log(movie)
+    };
+
+
+  if (movie === "popular") {
+    content = (
+      <MoviesDeck 
+      user={props.user}
+      movies={popularMovies}
+      favorites={props.favorites}
+      isFavorite={props.isFavorite}/>
+    );
+  } else if (movie === "recents"){
+    content = (
+      <MoviesDeck 
+      user={props.user}
+      movies={recentsMovies}
+      favorites={props.favorites}
+      isFavorite={props.isFavorite}/>
+    );
+  } else if (movie === "favorites"){
+    content = (
+    <Favorites 
+        user={props.user}
+        favorites={props.favorites}
+        movies={props.movies}
+        isFavorite={props.isFavorite}/>
+    )
+  }
+  else {
+    content = (
+      <MoviesDeck movies={props.movies}/>
+    );
+  }
+
+
+
 
   return (
     <section className="moviesList">
@@ -27,36 +98,24 @@ function moviesList(props) {
         <div className="more-info">
           <h6>
           <div className="buttons">
-           <Button className="popularMovies" color="inherit">
-            <Link className ="Link" underline="none" href="/popular" color="inherit">
-              Populares
-            </Link>
+           <Button onClick={handlePopularClick} className="popularMovies" color="inherit">
+             Populares
             </Button>
-            <Button className="recentsMovies" color="inherit">
-            <Link className = "Link" underline="none" href="/recents" color="inherit">
-              Recientes
-            </Link>
+            <Button onClick={handleRecientesClick} className="recentsMovies" color="inherit">
+            Recientes
+            </Button>
+            <Button onClick={handleFavoritosClick} className="favoritesMovies" color="inherit">
+            Favoritos
             </Button>
             </div>
           </h6>
         </div>
       </div>
-      <div className="movies-deck">
-        {props.movies.map((movie, index) => {
-          return (
-            <Card
-              className="Card"
-              {...movie}
-              key={index}
-              id={movie._id}
-              favorites={props.favorites}
-              isFavorite={props.isFavorite}
-            />
-          );
-        })}
-      </div>
+
+      {content}
+
     </section>
   );
-}
+};
 
-export default moviesList;
+export default MoviesList;

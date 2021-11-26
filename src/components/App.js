@@ -17,8 +17,6 @@ function App() {
   const [user, setUser] = React.useState(null);
   const [movies, setMovies] = React.useState([]);
   const [favorites, setFavorites] = React.useState([]);
-  const [recents, setRecentsMovies] = React.useState([]);
-  const [popular, setPopularMovies] = React.useState([]);
 
   React.useEffect(() => {
     const URL = "https://regardapi.herokuapp.com/v1/movies";
@@ -30,33 +28,6 @@ function App() {
     getMovies();
   }, []);
 
-  React.useEffect(() => {
-    const URL = "https://regardapi.herokuapp.com/v1/movies/recents";
-    const getMovie = async () => {
-      try {
-        const response = await fetch(`${URL}`);
-        const movie = await response.json();
-        setRecentsMovies(movie);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getMovie();
-  }, []);
-
-  React.useEffect(() => {
-    const URL = "https://regardapi.herokuapp.com/v1/movies/top5";
-    const getMovie = async () => {
-      try {
-        const response = await fetch(`${URL}`);
-        const movie = await response.json();
-        setPopularMovies(movie);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getMovie();
-  }, []);
 
   React.useEffect(() => {
     const loggedUserJson = window.localStorage.getItem("loggedUser");
@@ -129,25 +100,6 @@ function App() {
               <Home
                 user={user}
                 movies={movies}
-                favorites={favorites}
-                addFavorites={addFavorites}
-                removeFavorites={removeFavorites}
-              />
-            </Route>
-            <Route path="/recents">
-            <Home
-                user={user}
-                movies={recents}
-                favorites={favorites}
-                addFavorites={addFavorites}
-                removeFavorites={removeFavorites}
-              />
-            </Route>
-
-            <Route path="/popular">
-            <Home
-                user={user}
-                movies={popular}
                 favorites={favorites}
                 addFavorites={addFavorites}
                 removeFavorites={removeFavorites}

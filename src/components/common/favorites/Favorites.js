@@ -1,6 +1,6 @@
 import Button from "@material-ui/core/Button";
 import React from "react";
-import Card from "../../../containers/carousel/Card";
+import MoviesDeck from "../../../containers/MoviesDeck"
 import "./favorites.scss";
 
 const Favorites = (props) => {
@@ -8,20 +8,9 @@ const Favorites = (props) => {
 
   if (props.user) {
     content = (
-      <div className="movies-deck">
-        {props.favorites.map((favorite, index) => {
-          return (
-            <Card
-              key={index}
-              {...favorite}
-              id={favorite._id}
-              isFavorite={props.isFavorite}
-              favoriteState={true}
-              favorites={props.favorites}
-            />
-          );
-        })}
-      </div>
+      <MoviesDeck movies={props.favorites}
+      favorites={props.favorites}
+      isFavorite={props.isFavorite}></MoviesDeck>
     );
   } else {
     content = (
