@@ -13,11 +13,11 @@ export default function PageHeader(props) {
         <Typography className="title" variant="h5">
           Regarde
         </Typography>
-        <Button className="Inicio" color="inherit">
-        <Link underline= "none" className="linkInicio" color="inherit" href="/">
-          Inicio
+        <Link underline="none" className="linkInicio" color="inherit" href="/">
+          <Button className="Inicio" color="inherit">
+            Inicio
+          </Button>
         </Link>
-        </Button>
         <div className="buttons">
           {/* <IconButton
             className="searchButton"
@@ -27,22 +27,22 @@ export default function PageHeader(props) {
             <SearchIcon />
           </IconButton> */}
 
-          <Button className="peliculas" color="inherit">
-            <Link underline="none" href="/movies" color="inherit">
+          <Link underline="none" href="/movies" color="inherit">
+            <Button className="peliculas" color="inherit">
               Peliculas
-            </Link>
-          </Button>
+            </Button>
+          </Link>
 
-          <Button className="registro" color="inherit">
-            <Link underline="none" href="/signup" color="inherit">
+          <Link underline="none" href="/signup" color="inherit">
+            <Button className="registro" color="inherit">
               Registro
-            </Link>
-          </Button>
-          <Button className="login" variant="contained" color="primary">
-            <Link underline="none" href="/login" color="inherit">
+            </Button>
+          </Link>
+          <Link underline="none" href="/login" color="inherit">
+            <Button className="login" variant="contained" color="primary">
               Iniciar Sesión
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </Toolbar>
     );
@@ -65,17 +65,17 @@ export default function PageHeader(props) {
             <SearchIcon />
           </IconButton> */}
 
-          <Button className="peliculas" color="inherit">
-            <Link underline="none" href="/movies" color="inherit">
+          <Link underline="none" href="/movies" color="inherit">
+            <Button className="peliculas" color="inherit">
               Peliculas
-            </Link>
-          </Button>
+            </Button>
+          </Link>
 
-          <Button className="login" variant="contained" color="primary">
-            <Link underline="none" href="/logout" color="inherit">
+          <Link underline="none" href="/logout" color="inherit">
+            <Button className="login" variant="contained" color="primary">
               Cerrar Sesión
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </Toolbar>
     );
