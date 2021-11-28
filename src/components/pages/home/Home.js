@@ -2,6 +2,9 @@ import Banner from "../../common/banner/Banner";
 import MoviesList from "../../common/moviesList/MoviesList";
 import ReviewList from "../../common/reviews/ReviewList";
 import Footer from "../../common/footer/Footer";
+import MultiItemSlider from "../../common/slider/MultiItemSlider";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import { withRouter, useHistory } from "react-router-dom";
 import swal from "sweetalert";
@@ -40,6 +43,7 @@ const Home = (props) => {
   return (
     <>
       <Banner />
+      <MultiItemSlider />
       <MoviesList
         user={props.user}
         movies={props.movies}
