@@ -71,6 +71,10 @@ export default function PageHeader(props) {
             </Button>
           </Link>
 
+          <Typography className="user" variant="h6">
+          ¡Hola, {props.user.username}!
+          </Typography>
+
           <Link underline="none" href="/logout" color="inherit">
             <Button className="login" variant="contained" color="primary">
               Cerrar Sesión
