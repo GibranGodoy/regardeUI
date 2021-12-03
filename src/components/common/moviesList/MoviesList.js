@@ -40,17 +40,14 @@ const MoviesList = (props) => {
 
   const handlePopularClick = () => {
     setValue("popular");
-    console.log(movie);
   };
 
   const handleRecientesClick = () => {
     setValue("recents");
-    console.log(movie);
   };
 
   const handleFavoritosClick = () => {
     setValue("favorites");
-    console.log(movie);
   };
 
   if (movie === "popular") {

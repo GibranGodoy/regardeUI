@@ -4,7 +4,12 @@ import PageHeader from "./common/header/Header";
 import AppBar from "@material-ui/core/AppBar";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "../css/ThemeConfig";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import Home from "./pages/home/Home";
 import NotFound from "./common/404/NotFound";
 import Signup from "./pages/signup/Signup";
@@ -27,7 +32,6 @@ function App() {
     };
     getMovies();
   }, []);
-
 
   React.useEffect(() => {
     const loggedUserJson = window.localStorage.getItem("loggedUser");
@@ -130,6 +134,21 @@ function App() {
                 addFavorites={addFavorites}
                 removeFavorites={removeFavorites}
               />
+            </Route>
+            <Route exact path="/admin">
+              {user && user.type !== "admin" ? (
+                <Redirect to="/" />
+              ) : (
+                  // Solo es para probar que funciona el redirect
+                  // Aquí se carga la página de admin
+                <AllMovies
+                  user={user}
+                  movies={movies}
+                  favorites={favorites}
+                  addFavorites={addFavorites}
+                  removeFavorites={removeFavorites}
+                />
+              )}
             </Route>
             <Route path="*" component={NotFound} />
           </Switch>
