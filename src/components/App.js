@@ -17,6 +17,7 @@ import Login from "./pages/login/Login";
 import Logout from "./pages/logout/Logout";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
 import AllMovies from "./pages/allMovies/AllMovies";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -136,18 +137,12 @@ function App() {
               />
             </Route>
             <Route exact path="/admin">
-              {user && user.type !== "admin" ? (
-                <Redirect to="/" />
+              {user && user.type === "admin" ? (
+                <Dashboard user={user} movies={movies} />
               ) : (
-                  // Solo es para probar que funciona el redirect
-                  // Aquí se carga la página de admin
-                <AllMovies
-                  user={user}
-                  movies={movies}
-                  favorites={favorites}
-                  addFavorites={addFavorites}
-                  removeFavorites={removeFavorites}
-                />
+                // Solo es para probar que funciona el redirect
+                // Aquí se carga la página de admin
+                <Redirect to="/" />
               )}
             </Route>
             <Route path="*" component={NotFound} />
