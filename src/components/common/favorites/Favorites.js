@@ -45,7 +45,7 @@ const Favorites = (props) => {
 
   return (
     <section className="favorite-list">
-      <h5>Tu lista de favoritos</h5>
+      {/* <h5>Tu lista de favoritos</h5> */}
       {content}
     </section>
   );
