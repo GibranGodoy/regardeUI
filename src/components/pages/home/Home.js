@@ -2,7 +2,7 @@ import Banner from "../../common/banner/Banner";
 import MoviesList from "../../common/moviesList/MoviesList";
 import ReviewList from "../../common/reviews/ReviewList";
 import Footer from "../../common/footer/Footer";
-import MultiItemSlider from "../../common/slider/MultiItemSlider";
+import MoviesSlider from "../../common/slider/MoviesSlider";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
@@ -43,7 +43,7 @@ const Home = (props) => {
   return (
     <>
       <Banner />
-      <MultiItemSlider />
+      <MoviesSlider />
       <MoviesList
         user={props.user}
         movies={props.movies}
