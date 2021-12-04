@@ -9,3 +9,26 @@
     text-align: center;
     color: $text-white-400;
 }
+@media screen and (max-width: 576px){
+    .banner span{
+        font-size: 25px;
+        padding-right: 30px;
+        padding-left: 30px;
+        display: flex;
+        margin-top: 150px;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 767px){
+    .banner span{
+        font-size: 40px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .banner span{
+        font-size: 45px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}

@@ -110,28 +110,16 @@ const MoviesList = (props) => {
         <Section title={text} />
         <div className="more-info">
           <h6>
-            <div className="buttons">
-              <Button
-                onClick={handlePopularClick}
-                className="popularMovies"
-                color="inherit"
-              >
-                Populares
-              </Button>
-              <Button
-                onClick={handleRecientesClick}
-                className="recentsMovies"
-                color="inherit"
-              >
-                Recientes
-              </Button>
-              <Button
-                onClick={handleFavoritosClick}
-                className="favoritesMovies"
-                color="inherit"
-              >
-                Favoritos
-              </Button>
+          <div className="buttons btn-movies">
+           <Button onClick={handlePopularClick} className="popularMovies" color="inherit">
+             Populares
+            </Button>
+            <Button onClick={handleRecientesClick} className="recentsMovies" color="inherit">
+            Recientes
+            </Button>
+            <Button onClick={handleFavoritosClick} className="favoritesMovies" color="inherit">
+            Favoritos
+            </Button>
             </div>
           </h6>
         </div>
