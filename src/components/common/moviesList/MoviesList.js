@@ -97,7 +97,7 @@ const MoviesList = (props) => {
         <Section title={"Descubre más peliculas"} />
         <div className="more-info">
           <h6>
-          <div className="buttons">
+          <div className="buttons btn-movies">
            <Button onClick={handlePopularClick} className="popularMovies" color="inherit">
              Populares
             </Button>
