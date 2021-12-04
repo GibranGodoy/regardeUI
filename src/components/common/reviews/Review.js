@@ -57,7 +57,7 @@ export default function Review(props) {
       />
 
       <div>
-        <header>
+        <header className ="stars-movies">
           <h6>{props.review.movie.title}</h6>
           <StyledRating
             name="customized-color"

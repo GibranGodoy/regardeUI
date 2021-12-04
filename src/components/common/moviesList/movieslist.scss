@@ -49,3 +49,50 @@
     margin: 10px 0px;
     padding-bottom: 10px;
 }
+
+@media screen and (max-width: 576px){
+    .information{
+        width: 100%;
+        display: block;
+    }
+    .information .more-info .buttons{
+        gap:25px;
+        display: block;
+    }
+    .title{
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+    .btn-movies{
+        text-align: center;
+        width: 100%;
+        margin: 0 auto !important;
+    }
+    .information h3{
+        font-size: 30px;
+        margin-top: 40px;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 767px){
+    .title{
+        font-size: 20px;
+        width: 100%;
+        margin:0;
+    }
+    .information{
+        display: block;
+        text-align: center;
+    }
+    .btn-movies{
+        justify-content: center;
+        width: 100% !important;
+
+    }
+    .information h3{
+        font-size: 48px;
+        margin-top: 10px;
+
+    }
+}

@@ -10,13 +10,10 @@ export default function PageHeader(props) {
   if (!props.user) {
     content = (
       <Toolbar className="toolbar">
+        <Link underline="none" className="linkInicio" color="inherit" href="/">
         <Typography className="title" variant="h5">
           Regarde
         </Typography>
-        <Link underline="none" className="linkInicio" color="inherit" href="/">
-          <Button className="Inicio" color="inherit">
-            Inicio
-          </Button>
         </Link>
         <div className="buttons">
           {/* <IconButton
