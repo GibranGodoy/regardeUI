@@ -1,32 +1,30 @@
 import React from "react";
 import Section from "../section/Section";
 import MoviesDeck from "../../../containers/MoviesDeck.js";
-import Favorites from "../favorites/Favorites.js"
+import Favorites from "../favorites/Favorites.js";
 import "./movieslist.scss";
 import Button from "@material-ui/core/Button";
 
-
-
 const MoviesList = (props) => {
-    // // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [popularMovies, setPopularMovies] = React.useState([]);
-    const [recentsMovies, setRecentsMovies] = React.useState([]);
-    const [movie, setValue] = React.useState("");
+  // // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [popularMovies, setPopularMovies] = React.useState([]);
+  const [recentsMovies, setRecentsMovies] = React.useState([]);
+  const [movie, setValue] = React.useState("");
 
-    let content;
+  let content;
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    React.useEffect(() => {
-      const URL = "https://regardapi.herokuapp.com/v1/movies/top5";
-      const getPopularMovies = async () => {
-        const response = await fetch(URL);
-        const data = await response.json();
-        setPopularMovies(data);
-      };
-      getPopularMovies();
-    }, []);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  React.useEffect(() => {
+    const URL = "https://regardapi.herokuapp.com/v1/movies/top5";
+    const getPopularMovies = async () => {
+      const response = await fetch(URL);
+      const data = await response.json();
+      setPopularMovies(data);
+    };
+    getPopularMovies();
+  }, []);
 
-    React.useEffect(() => {
+  React.useEffect(() => {
     const URL = "https://regardapi.herokuapp.com/v1/movies/recents";
     const getMovie = async () => {
       try {
@@ -40,56 +38,55 @@ const MoviesList = (props) => {
     getMovie();
   }, []);
 
+  const handlePopularClick = () => {
+    setValue("popular");
+  };
 
-    const handlePopularClick = () => {
-      setValue('popular');
-      console.log(movie)
-    };
+  const handleRecientesClick = () => {
+    setValue("recents");
+  };
 
-    const handleRecientesClick = () => {
-      setValue('recents');
-      console.log(movie)
-    };
-
-    const handleFavoritosClick = () => {
-      setValue('favorites');
-      console.log(movie)
-    };
-
+  const handleFavoritosClick = () => {
+    setValue("favorites");
+  };
 
   if (movie === "popular") {
     content = (
-      <MoviesDeck 
-      user={props.user}
-      movies={popularMovies}
-      favorites={props.favorites}
-      isFavorite={props.isFavorite}/>
+      <MoviesDeck
+        user={props.user}
+        movies={popularMovies}
+        favorites={props.favorites}
+        isFavorite={props.isFavorite}
+      />
     );
-  } else if (movie === "recents"){
+  } else if (movie === "recents") {
     content = (
-      <MoviesDeck 
-      user={props.user}
-      movies={recentsMovies}
-      favorites={props.favorites}
-      isFavorite={props.isFavorite}/>
+      <MoviesDeck
+        user={props.user}
+        movies={recentsMovies}
+        favorites={props.favorites}
+        isFavorite={props.isFavorite}
+      />
     );
-  } else if (movie === "favorites"){
+  } else if (movie === "favorites") {
     content = (
-    <Favorites 
+      <Favorites
         user={props.user}
         favorites={props.favorites}
         movies={props.movies}
-        isFavorite={props.isFavorite}/>
-    )
-  }
-  else {
+        isFavorite={props.isFavorite}
+      />
+    );
+  } else {
     content = (
-      <MoviesDeck movies={props.movies}/>
+      <MoviesDeck
+        movies={props.movies}
+        favorites={props.favorites}
+        user={props.user}
+        isFavorite={props.isFavorite}
+      />
     );
   }
-
-
-
 
   return (
     <section className="moviesList">
@@ -97,23 +94,34 @@ const MoviesList = (props) => {
         <Section title={"Descubre más peliculas"} />
         <div className="more-info">
           <h6>
-          <div className="buttons">
-           <Button onClick={handlePopularClick} className="popularMovies" color="inherit">
-             Populares
-            </Button>
-            <Button onClick={handleRecientesClick} className="recentsMovies" color="inherit">
-            Recientes
-            </Button>
-            <Button onClick={handleFavoritosClick} className="favoritesMovies" color="inherit">
-            Favoritos
-            </Button>
+            <div className="buttons">
+              <Button
+                onClick={handlePopularClick}
+                className="popularMovies"
+                color="inherit"
+              >
+                Populares
+              </Button>
+              <Button
+                onClick={handleRecientesClick}
+                className="recentsMovies"
+                color="inherit"
+              >
+                Recientes
+              </Button>
+              <Button
+                onClick={handleFavoritosClick}
+                className="favoritesMovies"
+                color="inherit"
+              >
+                Favoritos
+              </Button>
             </div>
           </h6>
         </div>
       </div>
 
       {content}
-
     </section>
   );
 };

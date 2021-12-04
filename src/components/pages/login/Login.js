@@ -31,7 +31,11 @@ const Login = (props) => {
       const data = await response.json();
       window.localStorage.setItem("loggedUser", JSON.stringify(data.user));
       props.setUser(data.user);
-      props.history.push("/");
+      if (data.user.type === "admin") {
+        props.history.push("/admin");
+      } else {
+        props.history.push("/");
+      }
     } else {
       alert("Invalid email or password");
     }
@@ -68,7 +72,9 @@ const Login = (props) => {
             value={passwordValue}
             className="body-1"
           />
-          <button type="submit" className="loginButton">Login</button>
+          <button type="submit" className="loginButton">
+            Login
+          </button>
         </form>
       </div>
     </div>
