@@ -1,32 +1,32 @@
 import React from "react";
 import Section from "../section/Section";
 import MoviesDeck from "../../../containers/MoviesDeck.js";
-import Favorites from "../favorites/Favorites.js"
+import Favorites from "../favorites/Favorites.js";
 import "./movieslist.scss";
 import Button from "@material-ui/core/Button";
 
-
-
 const MoviesList = (props) => {
-    // // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [popularMovies, setPopularMovies] = React.useState([]);
-    const [recentsMovies, setRecentsMovies] = React.useState([]);
-    const [movie, setValue] = React.useState("");
+  // // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [popularMovies, setPopularMovies] = React.useState([]);
+  const [recentsMovies, setRecentsMovies] = React.useState([]);
+  const [randomMovies, setRandomMovies] = React.useState([]);
+  const [movie, setValue] = React.useState("");
 
-    let content;
+  let content;
+  let text;
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    React.useEffect(() => {
-      const URL = "https://regardapi.herokuapp.com/v1/movies/top5";
-      const getPopularMovies = async () => {
-        const response = await fetch(URL);
-        const data = await response.json();
-        setPopularMovies(data);
-      };
-      getPopularMovies();
-    }, []);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  React.useEffect(() => {
+    const URL = "https://regardapi.herokuapp.com/v1/movies/top5";
+    const getPopularMovies = async () => {
+      const response = await fetch(URL);
+      const data = await response.json();
+      setPopularMovies(data);
+    };
+    getPopularMovies();
+  }, []);
 
-    React.useEffect(() => {
+  React.useEffect(() => {
     const URL = "https://regardapi.herokuapp.com/v1/movies/recents";
     const getMovie = async () => {
       try {
@@ -40,61 +40,74 @@ const MoviesList = (props) => {
     getMovie();
   }, []);
 
-
-    const handlePopularClick = () => {
-      setValue('popular');
-      console.log(movie)
+  React.useEffect(() => {
+    const URL = "https://regardapi.herokuapp.com/v1/movies/randomMovies";
+    const getRandomMovies = async () => {
+      const response = await fetch(URL);
+      const data = await response.json();
+      setRandomMovies(data);
     };
+    getRandomMovies();
+  }, []);
 
-    const handleRecientesClick = () => {
-      setValue('recents');
-      console.log(movie)
-    };
+  const handlePopularClick = () => {
+    setValue("popular");
+  };
 
-    const handleFavoritosClick = () => {
-      setValue('favorites');
-      console.log(movie)
-    };
+  const handleRecientesClick = () => {
+    setValue("recents");
+  };
 
+  const handleFavoritosClick = () => {
+    setValue("favorites");
+  };
 
   if (movie === "popular") {
+    text = "Peliculas Populares";
     content = (
-      <MoviesDeck 
-      user={props.user}
-      movies={popularMovies}
-      favorites={props.favorites}
-      isFavorite={props.isFavorite}/>
+      <MoviesDeck
+        user={props.user}
+        movies={popularMovies}
+        favorites={props.favorites}
+        isFavorite={props.isFavorite}
+      />
     );
-  } else if (movie === "recents"){
+  } else if (movie === "recents") {
+    text = "Peliculas Recientes";
     content = (
-      <MoviesDeck 
-      user={props.user}
-      movies={recentsMovies}
-      favorites={props.favorites}
-      isFavorite={props.isFavorite}/>
+      <MoviesDeck
+        user={props.user}
+        movies={recentsMovies}
+        favorites={props.favorites}
+        isFavorite={props.isFavorite}
+      />
     );
-  } else if (movie === "favorites"){
+  } else if (movie === "favorites") {
+    text = "Tu lista de favoritos";
     content = (
-    <Favorites 
+      <Favorites
         user={props.user}
         favorites={props.favorites}
         movies={props.movies}
-        isFavorite={props.isFavorite}/>
-    )
-  }
-  else {
+        isFavorite={props.isFavorite}
+      />
+    );
+  } else {
+    text = "Descubre más peliculas";
     content = (
-      <MoviesDeck movies={props.movies}/>
+      <MoviesDeck
+        movies={randomMovies}
+        favorites={props.favorites}
+        user={props.user}
+        isFavorite={props.isFavorite}
+      />
     );
   }
-
-
-
 
   return (
     <section className="moviesList">
       <div className="information">
-        <Section title={"Descubre más peliculas"} />
+        <Section title={text} />
         <div className="more-info">
           <h6>
           <div className="buttons btn-movies">
@@ -113,7 +126,6 @@ const MoviesList = (props) => {
       </div>
 
       {content}
-
     </section>
   );
 };
