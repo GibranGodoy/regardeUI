@@ -1,0 +1,50 @@
+@import '../../../css/index.scss';
+
+.select-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin-left: 40px;
+    
+    
+
+    #demo-simple-select-filled{
+        color: $accents-accent-400;
+        align-self: baseline;
+    }
+}
+
+.slider-container{
+    width: 90vw;
+    height: 400px;
+    margin-top: 1.5rem;
+    margin-left: 5vw;
+
+  
+    .slider-card-container{
+        height: 354px;
+        width: 230px !important;
+        background-color: $accents-accent-400;
+        border-radius: 16px;
+        margin: 20px;
+    }
+    
+    .slider-card-container img {
+        border-radius: 16px;
+        width: 230px;
+        height: 354px;
+    }
+
+
+    .slick-slide.slick-active.slick-center.slick-current {
+        transform: scale(110%);
+        transition: ease .3s;
+       
+            
+     }
+    
+    
+    
+}
+
