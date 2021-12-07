@@ -40,8 +40,8 @@ export default function SelectCategorySlider() {
   //Select Handler
   const handleChange = (event) => {
     setCategory(event.target.value);
-    console.log(setCategory);
-    console.log(category);
+    // console.log(setCategory);
+    // console.log(category);
   };
   //--//
   //Slick-Slider Settings
@@ -154,15 +154,15 @@ export default function SelectCategorySlider() {
       content = (
         <div className="slider-container">
           <Slider {...settings}>
-            {romanceMovies.map((movie, index, poster) => {
+            {romanceMovies.map((movie, index) => {
               return (
                 <div
                   className="slider-card-container"
-                  {...movie}
+                  // {...movie}
                   key={index}
                   id={movie._id}
                 >
-                  <img src={poster} alt="{alt}" />
+                  <img src={movie.poster} alt="{alt}" />
                 </div>
               );
             })}
@@ -174,15 +174,15 @@ export default function SelectCategorySlider() {
       content = (
         <div className="slider-container">
           <Slider {...settings}>
-            {dramaMovies.map((movie, index, poster) => {
+            {dramaMovies.map((movie, index) => {
               return (
                 <div
                   className="slider-card-container"
-                  {...movie}
+                  // {...movie}
                   key={index}
                   id={movie._id}
                 >
-                  <img src={poster} alt="{alt}" />
+                  <img src={movie.poster} alt="{alt}" />
                 </div>
               );
             })}
@@ -194,15 +194,15 @@ export default function SelectCategorySlider() {
       content = (
         <div className="slider-container">
           <Slider {...settings}>
-            {adventureMovies.map((movie, index, poster) => {
+            {adventureMovies.map((movie, index) => {
               return (
                 <div
                   className="slider-card-container"
-                  {...movie}
+                  // {...movie}
                   key={index}
                   id={movie._id}
                 >
-                  <img src={poster} alt="{alt}" />
+                  <img src={movie.poster} alt="{alt}" />
                 </div>
               );
             })}
@@ -214,15 +214,15 @@ export default function SelectCategorySlider() {
       content = (
         <div className="slider-container">
           <Slider {...settings}>
-            {scifiMovies.map((movie, index, poster) => {
+            {scifiMovies.map((movie, index) => {
               return (
                 <div
                   className="slider-card-container"
-                  {...movie}
+                  // {...movie}
                   key={index}
                   id={movie._id}
                 >
-                  <img src={poster} alt="{alt}" />
+                  <img src={movie.poster} alt="{alt}" />
                 </div>
               );
             })}
@@ -234,15 +234,15 @@ export default function SelectCategorySlider() {
       content = (
         <div className="slider-container">
           <Slider {...settings}>
-            {comedyMovies.map((movie, index, poster) => {
+            {comedyMovies.map((movie, index) => {
               return (
                 <div
                   className="slider-card-container"
-                  {...movie}
+                  // {...movie}
                   key={index}
                   id={movie._id}
                 >
-                  <img src={poster} alt="{alt}" />
+                  <img src={movie.poster} alt="{alt}" />
                 </div>
               );
             })}
@@ -254,15 +254,15 @@ export default function SelectCategorySlider() {
       content = (
         <div className="slider-container">
           <Slider {...settings}>
-            {fantasyMovies.map((movie, index, poster) => {
+            {fantasyMovies.map((movie, index) => {
               return (
                 <div
                   className="slider-card-container"
-                  {...movie}
+                  // {...movie}
                   key={index}
                   id={movie._id}
                 >
-                  <img src={poster} alt="{alt}" />
+                  <img src={movie.poster} alt="{alt}" />
                 </div>
               );
             })}
@@ -274,15 +274,15 @@ export default function SelectCategorySlider() {
       content = (
         <div className="slider-container">
           <Slider {...settings}>
-            {actionMovies.map((movie, index, poster) => {
+            {actionMovies.map((movie, index) => {
               return (
                 <div
                   className="slider-card-container"
-                  {...movie}
+                  // {...movie}
                   key={index}
                   id={movie._id}
                 >
-                  <img src={poster} alt="{alt}" />
+                  <img src={movie.poster} alt="{alt}" />
                 </div>
               );
             })}
@@ -294,15 +294,15 @@ export default function SelectCategorySlider() {
       content = (
         <div className="slider-container">
           <Slider {...settings}>
-            {supernaturalMovies.map((movie, index, poster) => {
+            {supernaturalMovies.map((movie, index) => {
               return (
                 <div
                   className="slider-card-container"
-                  {...movie}
+                  // {...movie}
                   key={index}
                   id={movie._id}
                 >
-                  <img src={poster} alt="{alt}" />
+                  <img src={movie.poster} alt="{alt}" />
                 </div>
               );
             })}
@@ -315,15 +315,15 @@ export default function SelectCategorySlider() {
       content = (
         <div className="slider-container">
           <Slider {...settings}>
-            {defaultMovies.map((movie, index, poster) => {
+            {defaultMovies.map((movie, index) => {
               return (
                 <div
                   className="slider-card-container"
-                  {...movie}
+                  // {...movie}
                   key={index}
                   id={movie._id}
                 >
-                  <img src={poster} alt="{alt}" />
+                  <img src={movie.poster} alt="{alt}" />
                 </div>
               );
             })}
@@ -346,7 +346,7 @@ export default function SelectCategorySlider() {
             value={category}
             onChange={handleChange}
           >
-            <MenuItem value="" >
+            <MenuItem value="">
               <em>--Selecciona</em>
             </MenuItem>
             <MenuItem value={"romance"}>Romance</MenuItem>
