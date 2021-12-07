@@ -2,13 +2,11 @@ import Banner from "../../common/banner/Banner";
 import MoviesList from "../../common/moviesList/MoviesList";
 import ReviewList from "../../common/reviews/ReviewList";
 import Footer from "../../common/footer/Footer";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import { withRouter, useHistory } from "react-router-dom";
 import swal from "sweetalert";
 import './home.scss'
-import SelectCategory from "../../common/selectCategory/SelectCategory";
+import SelectCategorySlider from "../../common/selectCategorySlider/SelectCategorySlider";
 
 const Home = (props) => {
   let history = useHistory();
@@ -39,11 +37,12 @@ const Home = (props) => {
       });
     }
   };
-
+ 
+  
   return (
     <>
       <Banner />
-      <SelectCategory />
+      <SelectCategorySlider/>
       <MoviesList
         user={props.user}
         movies={props.movies}
