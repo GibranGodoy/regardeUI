@@ -25,3 +25,39 @@
         }
     }
 }
+
+@media screen and (max-width: 576px){
+    .reviews h5{
+        font-size: 20px;
+        text-align: center;
+    }
+    .reviews{
+        width: 100%;
+        margin: 0 !important;
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: center;
+    }
+    .reviews .list-review{
+        margin: 0 !important;
+        
+    }
+    .review div header{
+        gap: 10px;
+    }
+    .stars-movies{
+        display: block !important;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 991px){
+    .reviews .list-review{
+        margin: 0 !important;
+    }
+    .review div header{
+        gap: 10px !important;
+    }
+    .reviews h5{
+        text-align: center;
+    }
+}

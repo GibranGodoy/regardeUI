@@ -31,12 +31,44 @@
   .bedu-logo {
     text-align: right;
     margin-bottom: 24px;
-    margin-right: 64px;
+    margin-right: 40px;
   }
 
   .copyright{
       border-top: $text-white-400 1px solid;
       text-align: center;
       padding: 24px 0;
+  }
+}
+
+@media screen and (max-width: 576px) and (max-width: 991px){
+  .footer .info{
+    display: block;
+    text-align: center;
+    margin: 0;
+  }
+  .footer .info .repo{
+    margin: 0;
+  }
+  .footer .bedu-logo{
+    margin-right: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 1920px){
+  .footer .info{
+    justify-content: space-between;
+    margin-left: 0;
+    padding: 40px;
+  }
+  .footer .info .repo{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .team{
+    display: block;
   }
 }

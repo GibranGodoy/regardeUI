@@ -10,6 +10,10 @@
     margin-right: 40px;
     color: $accents-accent-200;
   }
+  .user{
+    font-family: "Lato";
+    color:$accents-accent-400;
+  }
   .linkInicio {
     margin-left: 40px;
     margin-right: 40px;
@@ -23,10 +27,61 @@
     gap: 40px;
     margin-right: 40px;
     justify-content: flex-end;
+    align-items: center;
     // .searchButton {
     // }
     .peliculas .registro .login {
       font-family: "Lato";
     }
+  }
+}
+@media screen and (max-width: 576px){
+  .root .buttons{
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .root .title{
+    margin: 0;
+  }
+  .MuiToolbar-regular{
+    display: block !important;
+    line-height: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .MuiToolbar-gutters{
+    padding: 0;
+  }
+  .loginPage{
+    margin-top: 30px;
+  }
+  .signupCard, .loginCard{
+    min-width: 100% !important;
+    height: auto !important;
+    margin-top: 40px;
+  }
+  .signupCard, .loginCard{
+    padding-bottom: 40px !important;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 991px){
+  .MuiToolbar-regular{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .root .title{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .footer .bedu-logo{
+    margin-right: 0 !important;
+    padding-right: 40px;
+  }
+  
+}
+@media screen and (min-width: 577px) and (max-width: 1920px){
+  .signupPage {
+    height: 150vh !important;
   }
 }
