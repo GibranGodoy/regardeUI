@@ -9,6 +9,7 @@ import Slider from "react-slick";
 import "./SelectCategorySlider.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useHistory } from "react-router-dom";
 
 //MUI Select styles
 const useStyles = makeStyles((theme) => ({
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
   },
 }));
-
+//--//
 export default function SelectCategorySlider() {
   //Hooks
   const classes = useStyles();
@@ -37,6 +38,8 @@ export default function SelectCategorySlider() {
   const [supernaturalMovies, setSupernaturalMovies] = React.useState([]);
   const [defaultMovies, setDefaultMovies] = React.useState([]);
   //--//
+  //Hook useHistory
+  const history = useHistory();
   //Select Handler
   const handleChange = (event) => {
     setCategory(event.target.value);
@@ -53,6 +56,33 @@ export default function SelectCategorySlider() {
     slidesToShow: 3,
     slidesToScroll: 1,
     speed: 500,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
   };
   //--//
   // Calling API For Each Category
@@ -146,6 +176,11 @@ export default function SelectCategorySlider() {
     getDefaultMovies();
   }, []);
   //--//
+  // Img span handler
+  // const handleClick = () => {
+  //   history.push(`/movie/${id}`);
+  // };
+  //--//
   //Conditional Rendering
   let content;
 
@@ -162,6 +197,7 @@ export default function SelectCategorySlider() {
                   key={index}
                   id={movie._id}
                 >
+                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}></span>
                   <img src={movie.poster} alt="{alt}" />
                 </div>
               );
@@ -182,6 +218,7 @@ export default function SelectCategorySlider() {
                   key={index}
                   id={movie._id}
                 >
+                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}></span>
                   <img src={movie.poster} alt="{alt}" />
                 </div>
               );
@@ -202,7 +239,9 @@ export default function SelectCategorySlider() {
                   key={index}
                   id={movie._id}
                 >
-                  <img src={movie.poster} alt="{alt}" />
+                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
+                    <img src={movie.poster} alt="{alt}" />
+                  </span>
                 </div>
               );
             })}
@@ -222,7 +261,9 @@ export default function SelectCategorySlider() {
                   key={index}
                   id={movie._id}
                 >
-                  <img src={movie.poster} alt="{alt}" />
+                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
+                    <img src={movie.poster} alt="{alt}" />
+                  </span>
                 </div>
               );
             })}
@@ -242,7 +283,9 @@ export default function SelectCategorySlider() {
                   key={index}
                   id={movie._id}
                 >
-                  <img src={movie.poster} alt="{alt}" />
+                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
+                    <img src={movie.poster} alt="{alt}" />
+                  </span>
                 </div>
               );
             })}
@@ -262,7 +305,9 @@ export default function SelectCategorySlider() {
                   key={index}
                   id={movie._id}
                 >
-                  <img src={movie.poster} alt="{alt}" />
+                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
+                    <img src={movie.poster} alt="{alt}" />
+                  </span>
                 </div>
               );
             })}
@@ -282,7 +327,9 @@ export default function SelectCategorySlider() {
                   key={index}
                   id={movie._id}
                 >
-                  <img src={movie.poster} alt="{alt}" />
+                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
+                    <img src={movie.poster} alt="{alt}" />
+                  </span>
                 </div>
               );
             })}
@@ -302,7 +349,9 @@ export default function SelectCategorySlider() {
                   key={index}
                   id={movie._id}
                 >
-                  <img src={movie.poster} alt="{alt}" />
+                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
+                    <img src={movie.poster} alt="{alt}" />
+                  </span>
                 </div>
               );
             })}
@@ -323,7 +372,9 @@ export default function SelectCategorySlider() {
                   key={index}
                   id={movie._id}
                 >
-                  <img src={movie.poster} alt="{alt}" />
+                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
+                    <img src={movie.poster} alt="{alt}" />
+                  </span>
                 </div>
               );
             })}
