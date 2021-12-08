@@ -11,9 +11,9 @@ export default function PageHeader(props) {
     content = (
       <Toolbar className="toolbar">
         <Link underline="none" className="linkInicio" color="inherit" href="/">
-        <Typography className="title" variant="h5">
-          Regarde
-        </Typography>
+          <Typography className="title" variant="h5">
+            Regarde
+          </Typography>
         </Link>
         <div className="buttons">
           {/* <IconButton
@@ -46,13 +46,11 @@ export default function PageHeader(props) {
   } else {
     content = (
       <Toolbar className="toolbar">
-        <Typography className="title" variant="h5">
-          Regarde
-        </Typography>
-        <Link className="linkInicio" color="inherit" href="/">
-          Inicio
+        <Link underline="none" className="linkInicio" color="inherit" href="/">
+          <Typography className="title" variant="h5">
+            Regarde
+          </Typography>
         </Link>
-
         <div className="buttons">
           {/* <IconButton
             className="searchButton"
@@ -69,7 +67,7 @@ export default function PageHeader(props) {
           </Link>
 
           <Typography className="user" variant="h6">
-          ¡Hola, {props.user.username}!
+            ¡Hola, {props.user.username}!
           </Typography>
 
           <Link underline="none" href="/logout" color="inherit">
