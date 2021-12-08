@@ -136,7 +136,7 @@ function App() {
                 removeFavorites={removeFavorites}
               />
             </Route>
-            <Route exact path="/admin">
+            {/* <Route exact path="/admin">
               {user && user.type === "admin" ? (
                 <Dashboard user={user} movies={movies} />
               ) : (
@@ -144,7 +144,7 @@ function App() {
                 // Aquí se carga la página de admin
                 <Redirect to="/" />
               )}
-            </Route>
+            </Route> */}
             <Route path="*" component={NotFound} />
           </Switch>
         </Router>

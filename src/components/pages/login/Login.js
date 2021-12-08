@@ -31,11 +31,7 @@ const Login = (props) => {
       const data = await response.json();
       window.localStorage.setItem("loggedUser", JSON.stringify(data.user));
       props.setUser(data.user);
-      if (data.user.type === "admin") {
-        props.history.push("/admin");
-      } else {
-        props.history.push("/");
-      }
+      props.history.push("/");
     } else {
       alert("Invalid email or password");
     }
