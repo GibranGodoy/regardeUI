@@ -8,7 +8,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect,
+  // Redirect,
 } from "react-router-dom";
 import Home from "./pages/home/Home";
 import NotFound from "./common/404/NotFound";
@@ -17,7 +17,7 @@ import Login from "./pages/login/Login";
 import Logout from "./pages/logout/Logout";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
 import AllMovies from "./pages/allMovies/AllMovies";
-import Dashboard from "./pages/dashboard/Dashboard";
+// import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -136,7 +136,7 @@ function App() {
                 removeFavorites={removeFavorites}
               />
             </Route>
-            <Route exact path="/admin">
+            {/* <Route exact path="/admin">
               {user && user.type === "admin" ? (
                 <Dashboard user={user} movies={movies} />
               ) : (
@@ -144,7 +144,7 @@ function App() {
                 // Aquí se carga la página de admin
                 <Redirect to="/" />
               )}
-            </Route>
+            </Route> */}
             <Route path="*" component={NotFound} />
           </Switch>
         </Router>
