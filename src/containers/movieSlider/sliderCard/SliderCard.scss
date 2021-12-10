@@ -1,0 +1,39 @@
+@import "../../../css/index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.container {
+  .slider-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    .slider-card-image {
+      img {
+        height: 354px;
+        width: 230px;
+        border-radius: 16px;
+        cursor: pointer;
+        
+      }    
+    }
+  }
+}
+
+.slick-slide.slick-active, .modal-wrapper, .modal-content {
+    img{
+        z-index: -2;
+    }
+}
+.slick-slide.slick-active.slick-center.slick-current {
+    
+    img {
+      transform: scale();
+      height: 444px;
+      width: 286px;
+      border-radius: 16px;
+      transition: 0.4s ease-in-out;
+    }
+  }
+
+  

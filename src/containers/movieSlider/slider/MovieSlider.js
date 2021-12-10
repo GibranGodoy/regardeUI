@@ -4,14 +4,15 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import Section from "../section/Section";
+import Section from '../../../components/common/section/Section' 
 import Slider from "react-slick";
-import "./SelectCategorySlider.scss";
+import "./MovieSlider.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useHistory } from "react-router-dom";
+import SliderCard from "../sliderCard/SliderCard";
 
-//MUI Select styles
+
+/* MUI Select styles */
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
@@ -21,13 +22,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
   },
 }));
-//--//
-export default function SelectCategorySlider() {
-  //Hooks
+/* :::: */
+export default function MovieSlider() {
+  /* Hooks */
   const classes = useStyles();
   const [category, setCategory] = React.useState("");
-  //--//
-  // State de api
+  /* :::: */
+  /* State de API */
   const [romanceMovies, setRomanceMovies] = React.useState([]);
   const [dramaMovies, setDramaMovies] = React.useState([]);
   const [scifiMovies, setSciFiMovies] = React.useState([]);
@@ -37,17 +38,15 @@ export default function SelectCategorySlider() {
   const [actionMovies, setActionMovies] = React.useState([]);
   const [supernaturalMovies, setSupernaturalMovies] = React.useState([]);
   const [defaultMovies, setDefaultMovies] = React.useState([]);
-  //--//
-  //Hook useHistory
-  const history = useHistory();
-  //Select Handler
+  /* :::: */
+ 
+  /* Select Handler */
   const handleChange = (event) => {
     setCategory(event.target.value);
     // console.log(setCategory);
     // console.log(category);
   };
-  //--//
-  //Slick-Slider Settings
+  /* Slick-Slider Settings */
   const settings = {
     className: "center",
     centerMode: true,
@@ -84,8 +83,8 @@ export default function SelectCategorySlider() {
       },
     ],
   };
-  //--//
-  // Calling API For Each Category
+  /* :::: */
+  /* Calling API For Each Category */
   React.useEffect(() => {
     const URL = "https://regardapi.herokuapp.com/v1/movies/group/Romance";
     const getRomanceMovies = async () => {
@@ -175,13 +174,8 @@ export default function SelectCategorySlider() {
     };
     getDefaultMovies();
   }, []);
-  //--//
-  // Img span handler
-  // const handleClick = () => {
-  //   history.push(`/movie/${id}`);
-  // };
-  //--//
-  //Conditional Rendering
+  /* :::: */
+  /* Conditional Rendering */
   let content;
 
   switch (category) {
@@ -191,15 +185,9 @@ export default function SelectCategorySlider() {
           <Slider {...settings}>
             {romanceMovies.map((movie, index) => {
               return (
-                <div
-                  className="slider-card-container"
-                  // {...movie}
-                  key={index}
-                  id={movie._id}
-                >
-                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}></span>
-                  <img src={movie.poster} alt="{alt}" />
-                </div>
+                <div>
+                  <SliderCard key ={index} poster={movie.poster}/>
+                </div>   
               );
             })}
           </Slider>
@@ -212,15 +200,7 @@ export default function SelectCategorySlider() {
           <Slider {...settings}>
             {dramaMovies.map((movie, index) => {
               return (
-                <div
-                  className="slider-card-container"
-                  // {...movie}
-                  key={index}
-                  id={movie._id}
-                >
-                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}></span>
-                  <img src={movie.poster} alt="{alt}" />
-                </div>
+                <SliderCard key ={index} poster={movie.poster}/>
               );
             })}
           </Slider>
@@ -233,16 +213,7 @@ export default function SelectCategorySlider() {
           <Slider {...settings}>
             {adventureMovies.map((movie, index) => {
               return (
-                <div
-                  className="slider-card-container"
-                  // {...movie}
-                  key={index}
-                  id={movie._id}
-                >
-                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
-                    <img src={movie.poster} alt="{alt}" />
-                  </span>
-                </div>
+                <SliderCard key ={index} poster={movie.poster}/>
               );
             })}
           </Slider>
@@ -253,18 +224,9 @@ export default function SelectCategorySlider() {
       content = (
         <div className="slider-container">
           <Slider {...settings}>
-            {scifiMovies.map((movie, index) => {
+            {scifiMovies.map((movie, index, poster) => {
               return (
-                <div
-                  className="slider-card-container"
-                  // {...movie}
-                  key={index}
-                  id={movie._id}
-                >
-                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
-                    <img src={movie.poster} alt="{alt}" />
-                  </span>
-                </div>
+                <SliderCard key ={index} poster={movie.poster}/>
               );
             })}
           </Slider>
@@ -277,16 +239,7 @@ export default function SelectCategorySlider() {
           <Slider {...settings}>
             {comedyMovies.map((movie, index) => {
               return (
-                <div
-                  className="slider-card-container"
-                  // {...movie}
-                  key={index}
-                  id={movie._id}
-                >
-                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
-                    <img src={movie.poster} alt="{alt}" />
-                  </span>
-                </div>
+                <SliderCard key ={index} poster={movie.poster}/>
               );
             })}
           </Slider>
@@ -299,16 +252,7 @@ export default function SelectCategorySlider() {
           <Slider {...settings}>
             {fantasyMovies.map((movie, index) => {
               return (
-                <div
-                  className="slider-card-container"
-                  // {...movie}
-                  key={index}
-                  id={movie._id}
-                >
-                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
-                    <img src={movie.poster} alt="{alt}" />
-                  </span>
-                </div>
+                <SliderCard key ={index} poster={movie.poster}/>
               );
             })}
           </Slider>
@@ -321,16 +265,7 @@ export default function SelectCategorySlider() {
           <Slider {...settings}>
             {actionMovies.map((movie, index) => {
               return (
-                <div
-                  className="slider-card-container"
-                  // {...movie}
-                  key={index}
-                  id={movie._id}
-                >
-                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
-                    <img src={movie.poster} alt="{alt}" />
-                  </span>
-                </div>
+                <SliderCard key ={index} poster={movie.poster}/>
               );
             })}
           </Slider>
@@ -343,16 +278,7 @@ export default function SelectCategorySlider() {
           <Slider {...settings}>
             {supernaturalMovies.map((movie, index) => {
               return (
-                <div
-                  className="slider-card-container"
-                  // {...movie}
-                  key={index}
-                  id={movie._id}
-                >
-                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
-                    <img src={movie.poster} alt="{alt}" />
-                  </span>
-                </div>
+                <SliderCard key ={index} poster={movie.poster}/>
               );
             })}
           </Slider>
@@ -364,32 +290,25 @@ export default function SelectCategorySlider() {
       content = (
         <div className="slider-container">
           <Slider {...settings}>
-            {defaultMovies.map((movie, index) => {
+            {defaultMovies.map((movie, index,) => {
               return (
-                <div
-                  className="slider-card-container"
-                  // {...movie}
-                  key={index}
-                  id={movie._id}
-                >
-                  <span onClick={()=>{history.push(`movie/${movie._id}`)}}>
-                    <img src={movie.poster} alt="{alt}" />
-                  </span>
-                </div>
+                <SliderCard key ={index} poster={movie.poster}/>
               );
             })}
           </Slider>
         </div>
       );
   }
-  //--//
-  //Component rendering
+  /* :::: */
+  /* Component rendering */
   return (
     <div>
       <div className="select-section">
         <Section title="Descubre por categoría" />
         <FormControl variant="filled" className={classes.formControl}>
-          <InputLabel id="demo-simple-select-filled-label">Categoria</InputLabel>
+          <InputLabel id="demo-simple-select-filled-label">
+            Categoria
+          </InputLabel>
           <Select
             className="myselect"
             labelId="demo-simple-select-filled-label"

@@ -1,6 +1,6 @@
 import Button from "@material-ui/core/Button";
 import React from "react";
-import MoviesDeck from "../../../containers/MoviesDeck"
+import MoviesDeck from "../../../containers/moviesDeck/MoviesDeck"
 import "./favorites.scss";
 
 const Favorites = (props) => {

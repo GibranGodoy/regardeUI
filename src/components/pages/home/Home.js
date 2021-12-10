@@ -6,7 +6,8 @@ import React from "react";
 import { withRouter, useHistory } from "react-router-dom";
 import swal from "sweetalert";
 import './home.scss'
-import SelectCategorySlider from "../../common/selectCategorySlider/SelectCategorySlider";
+import MovieSlider from "../../../containers/movieSlider/slider/MovieSlider";
+import Modal from '../../modal/Modal'
 
 const Home = (props) => {
   let history = useHistory();
@@ -42,7 +43,8 @@ const Home = (props) => {
   return (
     <>
       <Banner />
-      <SelectCategorySlider/>
+      <MovieSlider/>
+      <Modal />
       <MoviesList
         user={props.user}
         movies={props.movies}
