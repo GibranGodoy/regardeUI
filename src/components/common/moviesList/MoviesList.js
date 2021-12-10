@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "../section/Section";
-import MoviesDeck from "../../../containers/MoviesDeck.js";
+import MoviesDeck from "../../../containers/moviesDeck/MoviesDeck";
 import Favorites from "../favorites/Favorites.js";
 import "./movieslist.scss";
 import Button from "@material-ui/core/Button";

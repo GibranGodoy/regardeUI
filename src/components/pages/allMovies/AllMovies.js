@@ -1,4 +1,4 @@
-import MoviesDeck from "../../../containers/MoviesDeck.js";
+import MoviesDeck from "../../../containers/moviesDeck/MoviesDeck";
 import Footer from "../../common/footer/Footer";
 import React from "react";
 import { withRouter, useHistory } from "react-router-dom";

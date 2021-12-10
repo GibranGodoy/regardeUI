@@ -1,6 +1,6 @@
 import React from "react";
 import "./moviesdeck.scss";
-import Card from '../containers/carousel/Card';
+import Card from '../../components/common/card/Card';
 
 
 

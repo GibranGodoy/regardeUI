@@ -1,0 +1,63 @@
+@import '../../../css/index.scss';
+
+.select-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin-left: 40px;
+    
+    
+
+    #demo-simple-select-filled{
+        color: $accents-accent-400;
+        align-self: baseline;
+    }
+}
+
+
+.slider-container{
+    width: 86vw;
+    height: 400px;
+    margin-top: 1.5rem;
+    margin-left: 5vw;
+    margin-right: auto;
+    
+
+    .slick-slider, .slick-initialized {
+        height: 400px !important;
+        margin-left: 10px;
+    }
+
+    .slick-next::before, .slick-prev::before  {
+        font-size: 40px;
+    }
+    .slick-prev::before{
+        margin-right: 2vw;
+    }
+    .slick-next::before{
+        margin-left: 2vw;
+    }
+
+    
+}
+
+@media screen and (max-width: 576px){
+    .slider-container{
+        width: 80vw;
+        margin-left: 9vw;
+        margin-right: auto;
+
+        .slick-next::before, .slick-prev::before  {
+            font-size: 20px;
+        }
+
+        .slick-prev::before{
+            margin-right: 1vw;
+        }
+
+        .slick-next::before{
+            margin-left: 1vw;
+        }
+    }
+}
