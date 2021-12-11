@@ -4,6 +4,7 @@ import React from "react";
 import { withRouter, useHistory } from "react-router-dom";
 import swal from "sweetalert";
 import "./allMovies.scss";
+import PropTypes from "prop-types";
 
 const AllMovies = (props) => {
   let history = useHistory();
@@ -64,5 +65,12 @@ const AllMovies = (props) => {
     </>
   );
 };
+
+AllMovies.propTypes ={
+  user: PropTypes.object,
+  favorites: PropTypes.array.isRequired,
+  movies: PropTypes.array.isRequired
+
+}
 
 export default withRouter(AllMovies);

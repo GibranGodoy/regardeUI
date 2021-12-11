@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 
 export default function PageHeader(props) {
+  
   let content;
   if (!props.user) {
     content = (
@@ -81,4 +82,5 @@ export default function PageHeader(props) {
   }
 
   return <div className="root">{content}</div>;
+
 }

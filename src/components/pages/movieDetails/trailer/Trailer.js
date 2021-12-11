@@ -1,5 +1,6 @@
 import React from "react";
 import "./trailer.scss";
+import PropTypes from "prop-types";
 
 function Trailer(props) {
   let trailer;
@@ -20,6 +21,10 @@ function Trailer(props) {
       ></iframe>
     </section>
   );
+}
+
+Trailer.propTypes= {
+  trailer: PropTypes.string.isRequired
 }
 
 export default Trailer;
