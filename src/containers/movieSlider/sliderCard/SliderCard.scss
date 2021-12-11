@@ -8,32 +8,40 @@
     justify-content: center;
     align-items: center;
     height: 60vh;
+
     .slider-card-image {
       img {
         height: 354px;
         width: 230px;
         border-radius: 16px;
-        cursor: pointer;
         
       }    
     }
   }
 }
 
-.slick-slide.slick-active, .modal-wrapper, .modal-content {
-    img{
-        z-index: -2;
+@media screen and (max-width: 1028px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .slider-card {
+            height: 60vh;
+            align-items:initial;
     }
 }
-.slick-slide.slick-active.slick-center.slick-current {
-    
-    img {
-      transform: scale();
-      height: 444px;
-      width: 286px;
-      border-radius: 16px;
-      transition: 0.4s ease-in-out;
-    }
-  }
+}
 
+@media screen and (max-width: 576px){
+	
+    .container {
+        .slider-card {
+            height: 40vh;
+            align-items:initial;
+    }
+    .modal{
+        display: none;
+    }
+}
+}
   
