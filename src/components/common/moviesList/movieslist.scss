@@ -1,7 +1,7 @@
 @import '../../../css/index.scss';
 
 .information {
-    margin-top: 80px;
+    margin-top: 200px;
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -53,6 +53,7 @@
 @media screen and (max-width: 576px){
     .information{
         width: 100%;
+        margin-top: 64px;
         display: block;
     }
     .information .more-info .buttons{
@@ -84,6 +85,7 @@
     .information{
         display: block;
         text-align: center;
+        margin-top: 64px;
     }
     .btn-movies{
         justify-content: center;
