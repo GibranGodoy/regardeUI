@@ -4,7 +4,18 @@ import './SliderCard.scss'
 import Modal from "../../../components/common/modal/Modal";
 import '../../../components/common/modal/modal.scss'
 
-const SliderCard = (props) => {
+const SliderCard = ({
+  key,
+  id,
+  poster,
+  title,
+  year,
+  directors,
+  cast,
+  genres,
+  rate,
+  description,
+}) => {
   const [showModal, setShowModal] = React.useState(false);
 
   const openModal = () => {
@@ -14,22 +25,22 @@ const SliderCard = (props) => {
     <div className="container">
     <div className="slider-card">
       <div className="slider-card-image">
-        <img src={props.poster} alt="alt" onClick={openModal} />
+        <img src={poster} alt="alt" onClick={openModal} />
       </div>
       <Modal
-        className= "modal"
+        className= "modal-controler"
         showModal={showModal}
         setShowModal={setShowModal}
-        key={props.index}
-        id={props._id}
-        poster={props.poster}
-        title={props.title}
-        year={props.year}
-        directors={props.directors}
-        cast={props.cast}
-        genres={props.genres}
-        rate={props.rate}
-        description={props.description}
+        key={key}
+        id={id}
+        poster={poster}
+        title={title}
+        year={year}
+        directors={directors}
+        cast={cast}
+        genres={genres}
+        rate={rate}
+        description={description}
       />
     </div>
     </div>

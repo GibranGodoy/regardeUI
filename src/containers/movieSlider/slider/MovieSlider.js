@@ -62,15 +62,14 @@ export default function MovieSlider() {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 1,
+          initialSlide: 0,
         },
       },
       {
@@ -78,7 +77,7 @@ export default function MovieSlider() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 1,
+          initialSlide: 0,
         },
       },
     ],
@@ -186,7 +185,18 @@ export default function MovieSlider() {
             {romanceMovies.map((movie, index) => {
               return (
                 <div>
-                  <SliderCard key ={index} poster={movie.poster}/>
+                   <SliderCard 
+                key ={index} 
+                id={movie._id}
+                poster={movie.poster}
+                title={movie.title}
+                year={movie.year}
+                directors={movie.directors}
+                cast={movie.cast}
+                genres={movie.genres}
+                rate={movie.rate}
+                description={movie.description}
+                        />
                 </div>   
               );
             })}
@@ -200,7 +210,18 @@ export default function MovieSlider() {
           <Slider {...settings}>
             {dramaMovies.map((movie, index) => {
               return (
-                <SliderCard key ={index} poster={movie.poster}/>
+                <SliderCard 
+                key ={index} 
+                id={movie._id}
+                poster={movie.poster}
+                title={movie.title}
+                year={movie.year}
+                directors={movie.directors}
+                cast={movie.cast}
+                genres={movie.genres}
+                rate={movie.rate}
+                description={movie.description}
+                        />
               );
             })}
           </Slider>
@@ -213,7 +234,18 @@ export default function MovieSlider() {
           <Slider {...settings}>
             {adventureMovies.map((movie, index) => {
               return (
-                <SliderCard key ={index} poster={movie.poster}/>
+                <SliderCard 
+                key ={index} 
+                id={movie._id}
+                poster={movie.poster}
+                title={movie.title}
+                year={movie.year}
+                directors={movie.directors}
+                cast={movie.cast}
+                genres={movie.genres}
+                rate={movie.rate}
+                description={movie.description}
+                        />
               );
             })}
           </Slider>
@@ -226,7 +258,18 @@ export default function MovieSlider() {
           <Slider {...settings}>
             {scifiMovies.map((movie, index, poster) => {
               return (
-                <SliderCard key ={index} poster={movie.poster}/>
+                <SliderCard 
+                key ={index} 
+                id={movie._id}
+                poster={movie.poster}
+                title={movie.title}
+                year={movie.year}
+                directors={movie.directors}
+                cast={movie.cast}
+                genres={movie.genres}
+                rate={movie.rate}
+                description={movie.description}
+                        />
               );
             })}
           </Slider>
@@ -239,7 +282,18 @@ export default function MovieSlider() {
           <Slider {...settings}>
             {comedyMovies.map((movie, index) => {
               return (
-                <SliderCard key ={index} poster={movie.poster}/>
+                <SliderCard 
+                key ={index} 
+                id={movie._id}
+                poster={movie.poster}
+                title={movie.title}
+                year={movie.year}
+                directors={movie.directors}
+                cast={movie.cast}
+                genres={movie.genres}
+                rate={movie.rate}
+                description={movie.description}
+                        />
               );
             })}
           </Slider>
@@ -252,7 +306,18 @@ export default function MovieSlider() {
           <Slider {...settings}>
             {fantasyMovies.map((movie, index) => {
               return (
-                <SliderCard key ={index} poster={movie.poster}/>
+                <SliderCard 
+                key ={index} 
+                id={movie._id}
+                poster={movie.poster}
+                title={movie.title}
+                year={movie.year}
+                directors={movie.directors}
+                cast={movie.cast}
+                genres={movie.genres}
+                rate={movie.rate}
+                description={movie.description}
+                        />
               );
             })}
           </Slider>
@@ -265,7 +330,18 @@ export default function MovieSlider() {
           <Slider {...settings}>
             {actionMovies.map((movie, index) => {
               return (
-                <SliderCard key ={index} poster={movie.poster}/>
+                <SliderCard 
+                key ={index} 
+                id={movie._id}
+                poster={movie.poster}
+                title={movie.title}
+                year={movie.year}
+                directors={movie.directors}
+                cast={movie.cast}
+                genres={movie.genres}
+                rate={movie.rate}
+                description={movie.description}
+                        />
               );
             })}
           </Slider>
@@ -278,7 +354,18 @@ export default function MovieSlider() {
           <Slider {...settings}>
             {supernaturalMovies.map((movie, index) => {
               return (
-                <SliderCard key ={index} poster={movie.poster}/>
+                <SliderCard 
+                key ={index} 
+                id={movie._id}
+                poster={movie.poster}
+                title={movie.title}
+                year={movie.year}
+                directors={movie.directors}
+                cast={movie.cast}
+                genres={movie.genres}
+                rate={movie.rate}
+                description={movie.description}
+                        />
               );
             })}
           </Slider>
@@ -292,7 +379,18 @@ export default function MovieSlider() {
           <Slider {...settings}>
             {defaultMovies.map((movie, index,) => {
               return (
-                <SliderCard key ={index} poster={movie.poster}/>
+                <SliderCard 
+                key ={index} 
+                id={movie._id}
+                poster={movie.poster}
+                title={movie.title}
+                year={movie.year}
+                directors={movie.directors}
+                cast={movie.cast}
+                genres={movie.genres}
+                rate={movie.rate}
+                description={movie.description}
+                        />
               );
             })}
           </Slider>

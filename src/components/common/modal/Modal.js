@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 const Modal = ({
   showModal,
   setShowModal,
-  poster,
   id,
   title,
   year,
@@ -59,21 +58,30 @@ const Modal = ({
 
   let descriptionSliced;
   if (description) {
-    descriptionSliced = shorten(description, 150);
+    descriptionSliced = shorten(description, 130);
+  }
+  let titleSliced;
+  if(title){
+    titleSliced = shorten(title,40);
   }
   /* --- */
+  const closeModal = () => {
+    setShowModal((prev) => !prev);
+  };
 
   return (
     <>
       {showModal ? (
-        <div className="modal">
+        <div className="modal" showModal={showModal}>
           <div className="modal-wrapper">
-          {/* <div className="modal-image">
-                <img src={poster} alt="alt" />
-              </div> */}
             <div className="modal-content">
-              <span /* onClik={setShowModal((prev) => !prev)} */>Close</span>
-              <h5>{title}</h5>
+              <span
+                className="close-modal"
+                onClick={closeModal}
+              >
+                X
+              </span>
+              <h5>{titleSliced}</h5>
               <hr />
               <div className="content-info">
                 <div className="pub-dir-rep">
