@@ -5,6 +5,7 @@ import TextField from "@mui/material/TextField";
 import Rating from "@mui/material/Rating";
 import { styled } from "@mui/material/styles";
 import StarIcon from "@mui/icons-material/Star";
+import PropTypes from "prop-types";
 
 const WriteComment = (props) => {
   const StyledRating = styled(Rating)({
@@ -85,7 +86,12 @@ const WriteComment = (props) => {
           </p>
         </div>
         <div className="buttons">
-          <Button className="signup" variant="outlined" color="secondary" href='/signup'>
+          <Button
+            className="signup"
+            variant="outlined"
+            color="secondary"
+            href="/signup"
+          >
             Crear cuenta
           </Button>
           <Button
@@ -109,4 +115,8 @@ const WriteComment = (props) => {
   );
 };
 
+WriteComment.propTypes = {
+  movieId: PropTypes.any,
+  user: PropTypes.object,
+};
 export default WriteComment;

@@ -16,8 +16,10 @@ const SliderCard = ({
   rate,
   description,
 }) => {
-  const [showModal, setShowModal] = React.useState(false);
 
+  /* Show Modal Hook */
+  const [showModal, setShowModal] = React.useState(false);
+  /* Haldler for opening modal */
   const openModal = () => {
     setShowModal((prev) => !prev);
   };
@@ -29,7 +31,7 @@ const SliderCard = ({
       </div>
       <Modal
         className= "modal-controler"
-        showModal={showModal}
+        showmodal={showModal}
         setShowModal={setShowModal}
         key={key}
         id={id}
@@ -48,7 +50,13 @@ const SliderCard = ({
 };
 
 SliderCard.propTypes = {
-  poster: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
+  directors: PropTypes.array.isRequired,
+  cast: PropTypes.array.isRequired,
+  genres: PropTypes.array.isRequired,
+  rate: PropTypes.number.isRequired,
 };
 
 export default SliderCard;

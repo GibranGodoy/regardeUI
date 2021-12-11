@@ -1,6 +1,7 @@
 import React from "react";
 import "./moviesdeck.scss";
 import Card from '../../components/common/card/Card';
+import PropTypes from "prop-types";
 
 
 
@@ -23,6 +24,11 @@ const MoviesDeck = (props) => {
         </div>
     </section>
     )
+}
+
+MoviesDeck.propTypes ={
+    favorites: PropTypes.array.isRequired,
+    isFavorite: PropTypes.func.isRequired
 }
 
 

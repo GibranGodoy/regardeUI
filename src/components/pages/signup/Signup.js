@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import "./signup.scss";
+import PropTypes from "prop-types";
 
 const Signup = (props) => {
   const [usernameValue, setUsernameValue] = React.useState("");
@@ -132,5 +133,10 @@ const Signup = (props) => {
     </div>
   );
 };
+
+Signup.propTypes = {
+  setUser: PropTypes.func.isRequired,
+  history: PropTypes.object
+}
 
 export default withRouter(Signup);

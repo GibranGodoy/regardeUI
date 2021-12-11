@@ -3,6 +3,7 @@ import "./Card.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Card = ({ title, poster, rate, id, isFavorite, favorites }) => {
   const history = useHistory();
@@ -48,5 +49,14 @@ const Card = ({ title, poster, rate, id, isFavorite, favorites }) => {
     </div>
   );
 };
+
+Card.propTypes ={
+  id: PropTypes.string.isRequired,
+  poster: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  rate: PropTypes.number.isRequired,
+  favorites: PropTypes.array.isRequired,
+  isFavorite: PropTypes.func.isRequired
+}
 
 export default Card;

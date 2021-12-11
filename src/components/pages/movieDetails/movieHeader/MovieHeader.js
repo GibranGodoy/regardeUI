@@ -3,6 +3,7 @@ import "./movieHeader.scss";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import StarIcon from "@mui/icons-material/Star";
+import PropTypes from "prop-types";
 
 const MovieHeader = (props) => {
     const handleFavorites = () => {
@@ -54,4 +55,7 @@ const MovieHeader = (props) => {
   );
 };
 
+MovieHeader.propTypes ={
+  movie: PropTypes.object.isRequired
+}
 export default MovieHeader;

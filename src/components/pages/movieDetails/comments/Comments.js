@@ -1,6 +1,7 @@
 import React from "react";
 import "./comments.scss";
 import SingleComment from "./SingleComment";
+import PropTypes from "prop-types";
 
 function Comments(props) {
   let allReviews;
@@ -20,4 +21,7 @@ function Comments(props) {
   );
 }
 
+Comments.propTypes = {
+  reviews: PropTypes.array.isRequired
+}
 export default Comments;

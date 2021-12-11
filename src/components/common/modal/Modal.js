@@ -1,9 +1,10 @@
 import React from "react";
 import "./modal.scss";
 import { useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Modal = ({
-  showModal,
+  showmodal,
   setShowModal,
   id,
   title,
@@ -71,8 +72,8 @@ const Modal = ({
 
   return (
     <>
-      {showModal ? (
-        <div className="modal" showModal={showModal}>
+      {showmodal ? (
+        <div className="modal" showmodal={showmodal = "true"}>
           <div className="modal-wrapper">
             <div className="modal-content">
               <span
@@ -122,5 +123,17 @@ const Modal = ({
     </>
   );
 };
+
+Modal.propTypes ={
+  setShowModal: PropTypes.func,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
+  directors: PropTypes.array.isRequired,
+  cast: PropTypes.array.isRequired,
+  genres: PropTypes.array.isRequired,
+  rate: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
+}
 
 export default Modal;

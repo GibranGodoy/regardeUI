@@ -4,6 +4,7 @@ import MoviesDeck from "../../../containers/moviesDeck/MoviesDeck";
 import Favorites from "../favorites/Favorites.js";
 import "./movieslist.scss";
 import Button from "@material-ui/core/Button";
+import PropTypes from "prop-types";
 
 const MoviesList = (props) => {
   // // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -129,5 +130,11 @@ const MoviesList = (props) => {
     </section>
   );
 };
+MoviesList.propTypes ={
+  favorites: PropTypes.array.isRequired,
+  isFavorite: PropTypes.func.isRequired,
+  movies: PropTypes.array.isRequired,
+  user: PropTypes.object
+}
 
 export default MoviesList;

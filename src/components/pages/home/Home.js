@@ -7,6 +7,7 @@ import { withRouter, useHistory } from "react-router-dom";
 import swal from "sweetalert";
 import './home.scss'
 import MovieSlider from "../../../containers/movieSlider/slider/MovieSlider";
+import PropTypes from "prop-types";
 
 
 const Home = (props) => {
@@ -56,4 +57,10 @@ const Home = (props) => {
   );
 };
 
+Home.propTypes ={
+  user: PropTypes.object,
+  favorites: PropTypes.array.isRequired,
+  movies: PropTypes.array.isRequired
+
+}
 export default withRouter(Home);

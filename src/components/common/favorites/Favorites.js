@@ -2,6 +2,7 @@ import Button from "@material-ui/core/Button";
 import React from "react";
 import MoviesDeck from "../../../containers/moviesDeck/MoviesDeck"
 import "./favorites.scss";
+import PropTypes from "prop-types";
 
 const Favorites = (props) => {
   let content;
@@ -50,5 +51,10 @@ const Favorites = (props) => {
     </section>
   );
 };
+
+Favorites.propTypes ={
+  favorites: PropTypes.array.isRequired,
+  isFavorite: PropTypes.func.isRequired
+}
 
 export default Favorites;

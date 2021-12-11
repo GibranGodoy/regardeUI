@@ -1,5 +1,6 @@
 import React from "react";
 import "./description.scss";
+import PropTypes from "prop-types";
 
 function Description(props) {
     let allGenres
@@ -26,6 +27,10 @@ function Description(props) {
     </section>
   );
 }
+
+Description.propTypes = {
+  description: PropTypes.string.isRequired
+};
 
 export default Description;
 // {props.genres.map((genre, index) => (

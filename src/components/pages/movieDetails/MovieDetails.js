@@ -10,6 +10,7 @@ import Cast from "./cast/Cast";
 import Comments from "./comments/Comments";
 import WriteComment from "./writeComment/WriteComment";
 import swal from "sweetalert";
+import PropTypes from "prop-types";
 
 
 const MovieDetails = (props) => {
@@ -126,4 +127,10 @@ const MovieDetails = (props) => {
   );
 };
 
+MovieDetails.propTypes = {
+  favorites: PropTypes.array.isRequired,
+  user: PropTypes.object,
+  isFavorite: PropTypes.func.isRequired,
+  movie: PropTypes.object.isRequired
+}
 export default withRouter(MovieDetails);

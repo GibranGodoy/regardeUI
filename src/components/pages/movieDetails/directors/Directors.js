@@ -1,5 +1,6 @@
 import React from "react";
 import "./directors.scss";
+import PropTypes from "prop-types";
 
 function Directors(props) {
   let allDirectors;
@@ -22,4 +23,7 @@ function Directors(props) {
   );
 }
 
+Directors.propTypes = {
+  directors: PropTypes.array.isRequired
+};
 export default Directors;

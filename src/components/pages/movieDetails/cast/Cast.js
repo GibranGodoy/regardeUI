@@ -1,5 +1,6 @@
 import React from "react";
 import "./cast.scss";
+import PropTypes from "prop-types";
 
 function Cast(props) {
   let allCast
@@ -18,5 +19,9 @@ function Cast(props) {
     </section>
   );
 }
+
+Cast.propTypes = {
+  cast: PropTypes.array.isRequired
+};
 
 export default Cast;
