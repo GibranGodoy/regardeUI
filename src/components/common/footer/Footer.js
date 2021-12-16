@@ -15,12 +15,12 @@ function Footer() {
                     <p className="body-1">Martha Rachell Gozcon Domínguez</p>
                     <p className="body-1">Brian Gibran Godoy Lomelí</p>
                 </div>
-                <div className='repo'>
+                {/* <div className='repo'>
                     <h6>Repositorio</h6>
                     <a href="https://github.com/GibranGodoy/regardeUI">
                         <img alt="Enlace al repositorio de Regarde en GitHub" src={repo}></img>
                     </a>
-                </div>
+                </div> */}
             </div>
             <div className='bedu-logo'>
                 <a href='https://bedu.org/'>
